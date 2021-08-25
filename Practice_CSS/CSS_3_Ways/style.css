@@ -1,0 +1,19 @@
+div {
+    border-style: solid; 
+    border-color: blue; 
+    background-color: lightgoldenrodyellow; 
+    margin:auto; 
+    width: 800px;
+}
+h1{
+    text-align: center; 
+    color: rgb(109, 0, 136);
+}
+p{
+    text-align: center;
+}
+img{
+    width: 200px; 
+    margin: auto; 
+    display: block;
+}
