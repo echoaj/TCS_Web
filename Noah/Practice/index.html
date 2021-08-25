@@ -13,29 +13,58 @@
         <h3>Heading 3</h3>
         <h4>Heading 4</h4>
         <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
+        <h6>Heading 600</h6>
         <br>
         <hr>
         <p>This is my first paragraph!</p>
         <p>I am <u>learning</u> <b>HTML</b> at <i>The Coder School</i> </p>
         <p>h<sub>2</sub>0</p>
         <p>10<sup>2</sup></p>
+        <button> <a href="https://www.google.com/">Click Me</a> </button>
         <hr>
         <hr>
-
+        
+        <!-- Header usefull for nav bar-->
         <header>
             <nav>
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
+                    <li id="my_home">Home</li>
+                    <li id="my_about">About</li>
                     <li>Contact</li>
                     <li>Join Us</li>
                 </ul>
             </nav>
         </header>
 
-        <button> <a href="https://www.google.com/">Click Me</a> </button>
+        <!-- Main content-->
+        <main>
+            <h2>Lorem Ipsum</h2>
+            <article>
 
+                <section>
+                    <h2>Why is Lorem Ipsum</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </section>
+
+                <section>
+                    <h2>Where does it come from</h2>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from section</p>
+                </section>
+
+            </article>
+
+        </main>
+
+        <footer>
+            <!-- In line element (can be right next to each other)-->
+            <a href="#">Link1</a>
+            <a href="page2.html"><h3>Page2</h3></a>
+
+            <!-- Block Elements (Take up entire width of the page) -->
+            <p>help@lipsum.com</p>
+            <p>Privacy Policy</p>
+        </footer>
+        
     </body>
 
     <style>
@@ -52,6 +81,13 @@
         }
         li:hover{
             background-color: darkmagenta;
+        }
+
+        #my_home{
+            color: lightgreen;
+        }
+        #my_about{
+            color: red;
         }
     </style>
 
