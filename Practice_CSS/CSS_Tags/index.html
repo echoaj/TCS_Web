@@ -8,31 +8,44 @@
 </head>
 <body>
 
+
     <!-- 
-        Refernce by:
-        * Tag (all will be changed)         (lowest priority)
-        * Class (some will be changed)      (middle priority)
-        * Id (one will be changed)          (highest priority)
-    -->
+        -------------------- RULES --------------------
+        Class:
+            Multiple classes on same HTML element?  YES
+            Same class on multiple HTML elements?   YES
+        Id:
+            Multiple Ids on same HTML element?      NO
+            Same Id on multiple HTML elements?      YES (but bad practice)
+                                                        (may not work on all browsers)
+                                                        (In JS getElementByID() returns 1st instance)
+     -->
 
     <style>
         ul{
            list-style-type: none; 
         }
-        #garbage{
-            background-color: lightgray;
+
+        .fontChange{
+            font-family: 'Courier New', Courier, monospace;
         }
-        #reuse{
-            background-color: lightblue;
-        }
-        #plant_waste{
-            background-color: lightgreen;
+        .biggerText{
+            font-size: 35px;
         }
 
+        #trashTitle{
+            background-color: lightgray;
+        }
+        #recycleTitle{
+            background-color: lightblue;
+        }
+        #yardwasteTitle{
+            background-color: lightgreen;
+        }
     </style>
     
-    <h2>Trash</h2>
-    <ul id="garbage">
+    <h2 class="fontChange" id="trashTitle">Trash</h2>
+    <ul>
         <li>Pizza Boxes</li>
         <li>Bagged Items</li>
         <li>Plastic Wrap</li>
@@ -40,8 +53,8 @@
         <li>Textiles</li>
     </ul>
 
-    <h2>Recyclables</h2>
-    <ul id="garbage"> <!-- issue can have more than one id-->
+    <h2 class="fontChange biggerText" id="recycleTitle">Recyclables</h2>
+    <ul> <!-- issue can have more than one id-->
         <li>Paper</li>
         <li>Cardboard</li>
         <li>Glass Bottles</li>
@@ -49,13 +62,14 @@
         <li>Metal Cans</li>
     </ul>
 
-    <h2>Yard Waste</h2>
-    <ul id="plant_waste">
+    <h2 class="biggerText" id="yardwasteTitle">Yard Waste</h2>
+    <ul>
         <li>Leaves</li>
         <li>Bark/Wood</li>
         <li>Grass Clippings</li>
         <li>Fruit/Vegtable Scraps</li>
     </ul>
+
 
 </body>
 </html>
