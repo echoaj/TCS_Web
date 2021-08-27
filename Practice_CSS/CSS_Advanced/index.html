@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .page{
+            background-color: lightgrey;
+        }
+        .outer{
+            background-color: lightskyblue;
+        }
+        .center{
+            margin: auto;
+            width: 70%;
+        }
+        .textCenter{
+            text-align: center;
+        }
+        #pageTitle{
+            background-color: grey;
+            font-size: 50px;
+        }
+        td{
+            background-color: linen;
+        }
+        table, caption{
+            table-layout: fixed;
+            width: 100%;
+            border: 2px solid black;
+        }
+        caption{
+            font-size: 40px;
+        }
+        #colName{
+            font-size: 30px;
+        }
+        .description{
+            font-size: large;
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+        }
+        .descriptionImage{
+            padding: 20px;
+        }
+
+        /* ******************************** */
+
+        tr:first-of-type{
+            color: lawngreen;
+        }
+
+    </style>
+    
+    <div class="page">
+        <div class="outer center">
+            <h1 class="textCenter" id="pageTitle">Rocks</h1>
+            <table>
+                <thead>
+                    <caption>Types</caption>
+                </thead>
+                <tbody>
+                    <tr class="textCenter" id="colName">
+                        <td>Igneous</td>
+                        <td>Sedimentary</td>
+                        <td>Metamophic</td>
+                    </tr>
+                    <tr class="textCenter" id="rowBody">
+                        <td>
+                            <div class="description">
+                                <p>Igneous rocks are formed from melted rock deep inside the Earth.</p>
+                            </div>
+                            <div class="descriptionImage">
+                                <img src="https://geology.com/rocks/pictures/basalt-380.jpg" 
+                                alt="Image Unavailable" width="100%">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="description">
+                                <p>Sedimentary rocks are formed from layers of sand, silt, dead plants, and animal skeletons.</p>
+                            </div>
+                            <div class="descriptionImage">
+                                <img src="https://assets.fishersci.com/TFS-Assets/CCG/product-images/F58939~p.eps-650.jpg" 
+                                alt="Image Unavailable" width="100%">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="description">
+                                <p>Metamorphic rocks formed from other rocks that are changed by heat and pressure underground.</p>
+                            </div>
+                            <div class="descriptionImage">
+                                <img src="https://www.worldatlas.com/r/w960-q80/upload/5d/e2/08/shutterstock-756694396.jpg" 
+                                alt="Image Unavailable" width="100%">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

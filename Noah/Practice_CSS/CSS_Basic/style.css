@@ -1,0 +1,34 @@
+/* h1{
+    color: blue;
+} */
+
+
+/* By HTML Element */
+ul{
+    list-style-type: none;
+}
+
+.fontChange{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.biggerText{
+    font-size: 35px;
+}
+
+#trashTitle{
+    background-color:lightgrey;
+}
+
+#recycleTitle{
+    background-color: lightblue;
+}
+
+#yardTitle{
+    background-color: lightgreen;
+}
+
+#info{
+    width: 500px;
+    text-align: center;
+}
