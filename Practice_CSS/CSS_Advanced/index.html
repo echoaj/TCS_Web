@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Types</title>
 </head>
 <body>
-
+    <!-- Selectors https://www.w3schools.com/cssref/css_selectors.asp -->
+    <!-- At-Rules https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule -->
     <style>
+        /* CLASS */
         .page{
             background-color: lightgrey;
         }
         .outer{
-            background-color: lightskyblue;
+            background-image: url("https://c0.wallpaperflare.com/preview/515/894/510/canada-lambton-shores-grand-bend-beach-pebbles.jpg");
+            backdrop-filter: blur(3px);
         }
         .center{
             margin: auto;
@@ -22,49 +25,136 @@
         .textCenter{
             text-align: center;
         }
-        #pageTitle{
-            background-color: grey;
-            font-size: 50px;
+        .description{
+            font-size: large;
+            margin: auto;
+            padding: 5px;
         }
+        .descriptionImage{
+            padding: 20px;
+        }
+
+        /* ID */
+        #pageTitle{
+            animation: colorChange 6s infinite;
+            font-size: 50px;
+            margin: 0px;
+        }       
+        #colName{
+            font-size: 30px;
+        }
+
+        /* Element */
         td{
             background-color: linen;
         }
         table, caption{
             table-layout: fixed;
             width: 100%;
-            border: 2px solid black;
+            /* border: 2px solid black; */
         }
         caption{
-            font-size: 40px;
-        }
-        #colName{
-            font-size: 30px;
-        }
-        .description{
-            font-size: large;
+            font-size: 70px;
+            color: white;
+            text-shadow: 0px 0px 20px black, 0px 0px 20px black;
             text-align: center;
-            margin: auto;
-            padding: 10px;
-        }
-        .descriptionImage{
-            padding: 20px;
+            position: relative;
+            margin: 20px auto;
         }
 
-        /* ******************************** */
+        /* ************************************************************************ */
+        /* ************************************************************************ */
 
+        /* Change all descriptions within divs */
+        div.description{
+            background-color: rgb(192, 192, 192);
+        }
+
+        /* Select first tr found */
         tr:first-of-type{
-            color: lawngreen;
+            font-style: italic;
         }
 
+        /* Select the first td element found in every tr*/
+        tr td:first-child{
+            background-color: rgb(115, 168, 204);
+        }
+
+        /* Select all td elements that come immediatly after a td element (not inside)*/
+        td + td{
+            background-color: rgb(207, 178, 98);
+        }
+
+        /* Get last child*/
+        td:nth-last-child(1){
+            background-color: rgb(202, 134, 202);
+        }
+
+        /* Select the last Div -> withing parent the 2nd td found -> within the last tr found on the page. */
+        tr:last-child > td:nth-child(2) > div:last-child{
+            transform: scale(1);
+        }
+
+        /* Select the element that who's source matches = "..." */
+        [src="https://geology.com/rocks/pictures/basalt-380.jpg"]{
+            height: 240px;
+        }
+
+        /* Select all elements who's src conatins the substring "jpg" */
+        [src*="jpg"]{
+            border-radius: 25px;
+            /* offset-x offset-y blur-radius spread-radius | color, (another layer ontop) */
+            box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        /* Declaring variables */
+        :root{
+            --lineWidth: 27%;
+        }
+        
+        /* Insert empty box after caption text */
+        caption::after{
+            content: "";
+            display: inline;
+            width: var(--lineWidth);
+            height: 5px;
+            background: #ffffff;
+            right: 10%;
+            position: absolute;
+            top: 50%;
+        }
+
+        /* Insert empty box before caption text */
+        caption:before {
+            content: "";
+            display: inline;
+            width: var(--lineWidth);
+            height: 5px;
+            background: #ffffff;
+            left: 10%;
+            position: absolute;
+            top: 50%;
+        }
+
+        /* At-rules are css statements that instruct CSS how to behave */
+        /* Animation */
+        @keyframes colorChange {
+            from {background-color: cadetblue;}
+            to {background-color: crimson;}
+        }
+        
     </style>
     
     <div class="page">
         <div class="outer center">
+
             <h1 class="textCenter" id="pageTitle">Rocks</h1>
+
             <table>
                 <thead>
                     <caption>Types</caption>
                 </thead>
+
                 <tbody>
                     <tr class="textCenter" id="colName">
                         <td>Igneous</td>
@@ -73,11 +163,11 @@
                     </tr>
                     <tr class="textCenter" id="rowBody">
                         <td>
-                            <div class="description">
+                            <div class="description" id=>
                                 <p>Igneous rocks are formed from melted rock deep inside the Earth.</p>
                             </div>
                             <div class="descriptionImage">
-                                <img src="https://geology.com/rocks/pictures/basalt-380.jpg" 
+                                <img src="https://cdn-anbim.nitrocdn.com/oFzryzQkNXZkrzPFJvuMndWeBFfwilNX/assets/static/optimized/rev-cbd8003/wp-content/uploads/2019/10/porphyritic-texture-min.jpg" 
                                 alt="Image Unavailable" width="100%">
                             </div>
                         </td>
@@ -86,7 +176,7 @@
                                 <p>Sedimentary rocks are formed from layers of sand, silt, dead plants, and animal skeletons.</p>
                             </div>
                             <div class="descriptionImage">
-                                <img src="https://assets.fishersci.com/TFS-Assets/CCG/product-images/F58939~p.eps-650.jpg" 
+                                <img src="https://www.wardsci.com/stibo/bigweb/std.lang.all/06/18/10160618.jpg" 
                                 alt="Image Unavailable" width="100%">
                             </div>
                         </td>
@@ -102,6 +192,7 @@
                     </tr>
                 </tbody>
             </table>
+
         </div>
     </div>
 
