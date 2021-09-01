@@ -1,0 +1,54 @@
+/* CLASS */
+.page{
+    background-color: lightgrey;
+}
+.outer{
+    background-image: url("https://c0.wallpaperflare.com/preview/515/894/510/canada-lambton-shores-grand-bend-beach-pebbles.jpg");
+    backdrop-filter: blur(3px);
+}
+.center{
+    margin: auto;
+    width: 70%;
+}
+.textCenter{
+    text-align: center;
+}
+.description{
+    font-size: large;
+    margin: auto;
+    padding: 5px;
+}
+.descriptionImage{
+    padding: 20px;
+}
+
+/* ID */
+#pageTitle{
+    background-color: cornflowerblue;
+    font-size: 50px;
+    margin: 0px;
+}       
+#colName{
+    font-size: 30px;
+}
+
+/* Element */
+td{
+    background-color: linen;
+}
+table, caption{
+    table-layout: fixed;
+    width: 100%;
+    /* border: 2px solid black; */
+}
+caption{
+    font-size: 70px;
+    color: white;
+    text-shadow: 0px 0px 20px black, 0px 0px 20px black;
+    text-align: center;
+    position: relative;
+    margin: 20px auto;
+}
+
+/* ************************************************************************ */
+/* ************************** MORE SELECTORS ****************************** */
