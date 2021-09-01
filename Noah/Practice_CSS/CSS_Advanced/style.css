@@ -55,7 +55,7 @@ caption{
 
 /* Change all the description within divs */
 div.description{
-    background-color: crimson;
+    background-color: rgb(197, 207, 150);
 }
 
 /* Select first tr found */
@@ -71,6 +71,11 @@ tr td:first-child{
 /* Select all td elements that come immediatly after a td element (not in inside) */
 td + td{
     background-color: orange;
+}
+
+/* Get last child*/
+td:nth-last-child(1){
+    background-color: rgb(202, 134, 202);
 }
 
 /* Select the last div within the parent of the 2nd td found within the last tr found on page */
