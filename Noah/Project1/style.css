@@ -1,0 +1,23 @@
+
+
+div.center{
+    border-style: solid;
+    border-color: red;
+}
+
+.center{
+    margin: auto;
+    width: 70%;
+}
+
+#leftColumn{
+    background-color: cornflowerblue;
+    width: 20%;
+    float: left;
+}
+
+#rightColumn{
+    background-color: lightgray;
+    width: 79%;
+    float: left;
+}
