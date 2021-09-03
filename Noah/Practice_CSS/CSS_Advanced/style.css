@@ -24,7 +24,7 @@
 
 /* ID */
 #pageTitle{
-    background-color: cornflowerblue;
+    animation: colorChange 5s infinite;
     font-size: 50px;
     margin: 0px;
 }       
@@ -52,3 +52,74 @@ caption{
 
 /* ************************************************************************ */
 /* ************************** MORE SELECTORS ****************************** */
+
+/* Change all the description within divs */
+div.description{
+    background-color: rgb(197, 207, 150);
+}
+
+/* Select first tr found */
+tr:first-of-type{
+    font-style: italic;
+}
+
+/* Select the first td element found in every tr */
+tr td:first-child{
+    background-color: cyan;
+}
+
+/* Select all td elements that come immediatly after a td element (not in inside) */
+td + td{
+    background-color: orange;
+}
+
+/* Get last child*/
+td:nth-last-child(1){
+    background-color: rgb(202, 134, 202);
+}
+
+/* Select the last div within the parent of the 2nd td found within the last tr found on page */
+tr:last-child > td:nth-child(2) > div:last-child{
+    transform: scale(1);
+}
+
+/* Select the element who's source matches = "....." */
+[src="https://www.worldatlas.com/r/w960-q80/upload/5d/e2/08/shutterstock-756694396.jpg"]{
+    height: 240px;
+}
+
+/* Select all elements who's src contains the subsctring jpg*/
+[src*="jpg"]{
+    border-radius: 25px;
+}
+
+:root{
+    --lineWidth: 27%;
+}
+
+caption::before{
+    content: "";
+    display: inline;
+    width: var(--lineWidth);
+    height: 5px;
+    background:mintcream;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+}
+
+caption::after{
+    content: "";
+    display: inline;
+    width: var(--lineWidth);
+    height: 5px;
+    background: mintcream;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+}
+
+@keyframes colorChange{
+    from {background-color: navy;}
+    to {background-color: red;}
+}
