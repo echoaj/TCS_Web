@@ -7,17 +7,64 @@ div.center{
 
 .center{
     margin: auto;
-    width: 70%;
+}
+
+#outer{
+    width:900px;
 }
 
 #leftColumn{
-    background-color: cornflowerblue;
-    width: 20%;
+    background-color: rgb(110, 140, 180);
+    width: 30%;
     float: left;
 }
 
 #rightColumn{
     background-color: lightgray;
-    width: 79%;
+    width: 70%;
     float: left;
 }
+
+div > #leftColumn{
+    /* background-color: lime; */
+}
+
+#photoDiv{
+    /* background-color: magenta; */
+    display: flex;
+    height: 250px;
+}
+
+#photo{
+    display: block;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.548);
+    border-radius: 100%;
+}
+
+#fullName{
+    /* background-color: maroon; */
+    text-align: right;
+    padding: 0px;
+}
+
+.leftWritting{
+    margin: 0px;
+    padding: 0px 20px;
+    color: rgb(230, 230, 240);
+    font-family: 'Spartan', sans-serif;
+}
+
+h1.leftWritting{
+    font-size: 27px;
+    line-height: 46px;
+}
+/* 
+Paddng:
+Increases size of element without increasing size of content in it. 
+
+Margini:
+Increases space ouside of element. Gap between elements. 
+*/
