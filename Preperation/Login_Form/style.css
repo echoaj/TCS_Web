@@ -1,0 +1,69 @@
+
+/* Photo backgrounds: http://127.0.0.1:5500/Preperation/Login_Form/login.html */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+    background-image: url(http://dianov-art.ru/wp-content/uploads/Blackground-by-Alberto-Seveso-02.jpg);
+}
+
+.box{
+    width: 300px;
+    padding: 30px;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 50%);
+    /* background: rgb(30, 119, 30); */
+    background-image: linear-gradient(rgba(129, 219, 255, 0.651), rgb(153, 45, 139));
+    text-align: center;
+    border-radius: 30px;
+}
+.box h1{
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 38px;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 0px 10px;
+}
+
+.box h1::after{
+    content: "";
+    width: 170px;
+    height: 3px;
+    background-color: rgba(0, 0, 0, 0.15);
+    display: block;
+    margin: auto;
+}
+
+.box input[type="text"], .box input[type="password"]{
+    display: block;
+    padding: 13px 10px;
+    width: 200px;
+    margin: 20px auto;
+    border: rgb(0, 0, 0) 0px solid;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.25px;
+    background-color: rgba(255, 255, 255, 0.747);
+}
+
+.box input[type="text"]:focus, .box input[type="password"]:focus{
+    background-color: rgb(255, 255, 255);
+}
+
+.box input[type="submit"]{
+    border: 0px;
+    /* background: none; */
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.box input[type="submit"]:hover{
+    background-color: rgba(34, 148, 255, 0.788);
+    color: white;
+}
