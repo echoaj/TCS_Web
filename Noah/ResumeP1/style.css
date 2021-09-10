@@ -1,8 +1,10 @@
 
-
+body{
+    background-color: black;
+}
 div.center{
     border-style: solid;
-    border-color: red;
+    /* border-color: red; */
 }
 
 .center{
@@ -10,18 +12,14 @@ div.center{
 }
 
 #outer{
-    width:900px;
+    width: 900px;
+    height: 1000px;
 }
 
 #leftColumn{
     background-color: rgb(70, 95, 120);
     width: 30%;
-    float: left;
-}
-
-#rightColumn{
-    background-color: lightgray;
-    width: 70%;
+    height: 100%;
     float: left;
 }
 
@@ -44,14 +42,19 @@ div.center{
     /* background-color: maroon; */
     text-align: right;
     padding: 0px;
+    margin-bottom: 15px;
 }
 
 .leftWritting{
     margin: 0px;
-    padding: 0px 20px;
+    padding: 0px 25px;
     color: rgb(220, 220, 230);
     font-family: 'Spartan', sans-serif;
     text-align: right;
+}
+
+#personalInfo{
+    margin-bottom: 30px;
 }
 
 h1.leftWritting{
@@ -61,7 +64,8 @@ h1.leftWritting{
 }
 
 h1.subtitle{
-    font-size: 15px;
+    font-size: 14px;
+    padding-top: 3px;
 }
 
 .bgTitle{
@@ -74,21 +78,63 @@ div.leftWritting{
     line-height: 6px;
 }
 
+div.leftWritting p{
+    word-spacing: 5px;
+}
+
+#skills h4{
+    color: white;
+}
+
 /* --------------------------- RIGHT COLUMN -------------------------------- */
-.rightWritting{
+
+#rightColumn{
+    background-color: white;
+    width: 70%;
+    height: 100%;
+    float: left;
+    /* border: purple dotted; */
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;;
     text-align: left;
-    background-color: skyblue;
-    padding-left: 20px;
+    padding: 50px 50px 50px 25px;
     font-size: 12px;
 }
 
 .RelatedCoursework p{
-    line-height: 6px;
+    line-height: 20px;
+    word-spacing: 5px;
 }
 
 .Projects a {
     color: black;
+}
+
+.topic{
+    margin-bottom: 32px;
+}
+
+.topic > h2::first-line{
+    color: rgb(65, 90, 115);
+    line-height: 0px; 
+    font-size: 16px;
+}
+
+.Projects p{
+    line-height: 10px;
+}
+
+.Education p{
+    line-height: 10px;
+}
+
+.Experience p{
+    line-height: 10px;
+}
+
+#rightColumn li{
+    margin-left: -25px;
+    padding-left: 0px;
 }
 
 /* 
