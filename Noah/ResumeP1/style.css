@@ -76,12 +76,20 @@ div.leftWritting{
 
 /* --------------------------- RIGHT COLUMN -------------------------------- */
 .rightWritting{
+    font-family: Arial, Helvetica, sans-serif;;
     text-align: left;
     background-color: skyblue;
     padding-left: 20px;
+    font-size: 12px;
 }
 
+.RelatedCoursework p{
+    line-height: 6px;
+}
 
+.Projects a {
+    color: black;
+}
 
 /* 
 Paddng:
