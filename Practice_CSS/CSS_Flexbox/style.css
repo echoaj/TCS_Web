@@ -1,0 +1,56 @@
+:root{
+    background-color: rgb(177, 177, 177);
+}
+
+.content{
+    background-color: rgb(255, 255, 255);
+    margin: 50px;
+    text-align: center;
+}
+
+h1{
+    background-color: rgb(218, 224, 143);
+    margin: 0px;
+}
+
+.even_columns{
+    background-color: springgreen;
+}
+
+.col{
+    background-color: slateblue;
+    border: black 2px solid;
+    width: 200px;
+    height: 200px;
+}
+
+.even_columns{
+    display: flex;      /*flexbox*/
+}
+
+.even_columns > *{
+    flex-basis: 100%;   /*extend to edge*/
+}
+
+.grid-ish{
+    display: flex;      /*flexbox*/
+    flex-wrap: wrap;
+}
+
+.grid-ish > *{
+    /* 1-you can grow 1-you can shrink  */
+    flex: 1 1 10em;
+}
+
+.content-sidebar{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-sidebar > *:nth-child(1){
+    flex: 1 1 70%;
+}
+
+.content-sidebar > *:nth-child(2){
+    flex: 1 1 30%;
+}
