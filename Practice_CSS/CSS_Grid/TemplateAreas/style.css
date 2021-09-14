@@ -1,0 +1,54 @@
+
+body{
+    color:#fff;
+    text-align: center;
+}
+
+#content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* make 4 equal columns*/
+    grid-auto-rows: minmax(100px, auto);    /* Give each row a minimum of 100px and max of auto*/
+    max-width: 960px;   /* make width of content max of 960px */
+    margin: 0 auto;     /* make margin 0 and auto so that content goes in center of screen */
+    background-color: black;
+    padding: 20px;
+    /* Remeber, there are 4 columns*/
+    grid-template-areas: 
+    "nav header header header"
+    "nav main main main"
+    "nav section section aside"
+    "nav section section aside"
+    ". footer footer footer";
+    grid-gap: 5px;
+}
+
+
+header{
+    background-color: darkolivegreen;
+    grid-area: header;
+}
+
+main{
+    background-color: darkorange;
+    grid-area: main;
+}
+
+aside{
+    background-color:darkblue;
+    grid-area: aside;
+}
+
+nav{
+    background-color:darkviolet;
+    grid-area: nav;
+}
+
+section{
+    background-color:darkcyan;
+    grid-area: section;
+}
+
+footer{
+    background-color:darkred;
+    grid-area: footer;
+}

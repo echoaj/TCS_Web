@@ -14,5 +14,5 @@ FLEXBOX:
 GRID:
     * good for preceisly place grid items into cells defined by rows and columns
     * Do you want your layout shape your content?
-    * Great for strickly defininf a layout for your website.
+    * Great for strickly defining a layout for your website.
 
