@@ -1,0 +1,68 @@
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #222;
+    text-align: center;
+    box-shadow: 1px 2px 3px grey;
+    border-radius: 8px;
+    color: #222;
+    font-size: 2em;
+    font-family: arial, sans-serif;
+    background-color: #f9d423;
+    font-weight: bold;
+  }
+
+  .item:hover {
+    color: #fff;
+  }
+  
+  
+#container{
+    width: 95vw;
+    height: 60vh;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    outline: 6px solid rgb(46, 43, 226);
+    display: grid;  /* create grid system */
+}
+
+#container{
+    /* 1 column 200px*/
+    grid-template-columns: 200px; 
+    /* 2 columns 200px*/  
+    grid-template-columns: 200px 200px;   
+    /* 3 columns 200px*/  
+    grid-template-columns: 200px 200px 200px;
+    /* Last column fills extra space*/
+    grid-template-columns: 200px 200px auto;
+    /* middle column fills extra space */
+    grid-template-columns: 200px auto 200px;
+    /* 50% space then 15% then 25% space*/
+    grid-template-columns: 50% 15% 35%;
+    /* Six equal width columns of 1 fractional unit (100/6 == 16.6%)*/
+    grid-template-columns: repeat(6, 1fr);
+    /* auto fill when available space of 300px */
+    grid-template-columns: repeat(auto-fill, 300px);
+    /* minimax shrink untill 300px */
+    grid-template-columns: 1fr minmax(300px, 1fr);
+    /* auto fit columns of 300px */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* 3 columns that auto fit and rows are different sizes */
+    grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
+    grid-template-rows: 100px 50px;
+    /* rearrange ordering of item in row: 8 rows but 5 is in 7th spot */
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-flow: dense;
+    /* Column gap */
+    grid-column-gap: 20px;
+    /* align content at the last row in div */
+    align-content: end;
+    /* place content in the center of div */
+    place-content: center;
+}
+
+.five {
+    grid-column: 7/8;
+}
