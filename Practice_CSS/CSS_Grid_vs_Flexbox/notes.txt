@@ -8,8 +8,11 @@ GRID vs FLEXBOX   reference: https://www.youtube.com/watch?v=18VLSXfsj94
 FLEXBOX:
     * must either have a column or row based layout.
     * Do you wnat your conent to shape your layout?
+    * browser only calculates where to put items in one direction
+    * Great for aligning content & moving blocks
 
 GRID:
     * good for preceisly place grid items into cells defined by rows and columns
     * Do you want your layout shape your content?
+    * Great for strickly defininf a layout for your website.
 

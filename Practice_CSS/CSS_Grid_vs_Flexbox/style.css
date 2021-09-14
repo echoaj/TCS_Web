@@ -29,3 +29,32 @@
 .flex > .cell:nth-child(2){
     flex-grow: 2;
 }
+
+/* -------------- FLEX - content shapes layout ----------------*/
+.container-flex{
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.container-flex > .cell{
+    background-color: coral;
+    padding: 3rem;
+}
+
+/* -------------- GRID - layout shapes content ----------------*/
+.container-grid{
+    padding: 2rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* create responsive layout */
+    /* create as many columns as posssible with minimum with of 20rem; */
+    /* grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); */
+}
+
+.container-grid > .cell{
+    background-color: rgb(70, 196, 196);
+    padding: 3rem;
+}
