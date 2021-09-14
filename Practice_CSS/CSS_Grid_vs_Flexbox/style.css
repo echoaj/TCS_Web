@@ -1,0 +1,31 @@
+/* 16px = 1rem  rem adapts to user browser prefrences */
+
+.container{
+    padding: 2rem;
+}
+
+.cell {
+    background-color: rgb(172, 172, 172);
+    font-size: x-large;
+    text-align: center;
+    padding: 1rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 1rem;
+}
+
+.flex{
+    display: flex;
+    gap: 1rem;
+}
+
+.flex > .cell{
+    flex-grow: 1;
+}
+
+.flex > .cell:nth-child(2){
+    flex-grow: 2;
+}

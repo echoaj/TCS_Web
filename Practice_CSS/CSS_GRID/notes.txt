@@ -1,8 +1,4 @@
-Grid vs Flexbox
-
-GRID is a 2 Dimensional system          - we have control of how we layed out horizontally or vertically
-FLEXBOX is a 1 Dimensional system       - control on how you lay out elements in column or row (one or the other)
-
+Cheetsheet: https://css-tricks.com/snippets/css/complete-guide-grid/
 
 Grid Line - a line dividing grid column or row
 Grid Track - a full column or row

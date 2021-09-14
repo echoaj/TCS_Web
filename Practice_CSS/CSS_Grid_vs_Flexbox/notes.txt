@@ -1,0 +1,15 @@
+Grid vs Flexbox
+
+GRID is a 2 Dimensional system          - we have control of how we layed out horizontally or vertically
+FLEXBOX is a 1 Dimensional system       - control on how you lay out elements in column or row (one or the other)
+
+GRID vs FLEXBOX   reference: https://www.youtube.com/watch?v=18VLSXfsj94
+
+FLEXBOX:
+    * must either have a column or row based layout.
+    * Do you wnat your conent to shape your layout?
+
+GRID:
+    * good for preceisly place grid items into cells defined by rows and columns
+    * Do you want your layout shape your content?
+
