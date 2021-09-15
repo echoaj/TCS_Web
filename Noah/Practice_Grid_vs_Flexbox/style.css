@@ -1,7 +1,7 @@
 /* 16px = 1rem  rem adapts to user browser prefrences */
 
 .container{
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .cell {
@@ -9,5 +9,52 @@
     font-size: x-large;
     text-align: center;
     padding: 1rem;
+    border: 1px solid;
 }
 
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 1rem;
+}
+
+.flex{
+    display: flex;
+    gap: 1rem;
+}
+
+.flex > .cell{
+    flex-grow: 1;
+}
+
+.flex > .cell:nth-child(2){
+    flex-grow: 2;
+}
+
+/*************************************/
+
+.container-grid{
+    padding: 2rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.container-grid > .cell{
+    background-color: lightblue;
+    padding: 2rem;
+}
+
+/*************************************/
+
+.container-flex{
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem
+}
+
+.container-flex > .cell{
+    background-color: coral;
+    padding: 3rem;
+}
