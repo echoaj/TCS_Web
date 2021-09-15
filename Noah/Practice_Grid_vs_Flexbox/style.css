@@ -1,0 +1,13 @@
+/* 16px = 1rem  rem adapts to user browser prefrences */
+
+.container{
+    padding: 2rem;
+}
+
+.cell {
+    background-color: rgb(172, 172, 172);
+    font-size: x-large;
+    text-align: center;
+    padding: 1rem;
+}
+
