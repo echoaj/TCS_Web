@@ -1,12 +1,14 @@
 // https://scratch.mit.edu/projects/547319087/editor/
 //A. Defining Variables
+
 //1. Title
 var PsPl = document.getElementById("PsPl")
 var SP = document.getElementById("SP")
 var Bank = document.getElementById("Bank")
 var FP = document.getElementById("FP")
 var Rst = document.getElementById("Rst")
-    //2.Stores
+
+//2.Stores
         //a. Count Display
 var SB = document.getElementById("SB")
 var S1C = document.getElementById("S1C")
