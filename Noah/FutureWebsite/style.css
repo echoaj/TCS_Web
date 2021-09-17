@@ -1,0 +1,11 @@
+
+body{
+    text-align: center;
+    font: 2rem "Arial";
+    max-width: 800px;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
