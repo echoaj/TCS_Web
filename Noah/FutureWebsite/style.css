@@ -4,8 +4,77 @@ body{
     font: 2rem "Arial";
     max-width: 800px;
     margin: 0 auto;
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    "title title"
+    "welcome welcome"
+    "card1 card2"
+    "card3 card4";
 }
 
+#title{
+    height: 200px;
+    background-color: aquamarine;
+    grid-area: title;
+}
 
+#welcome{
+    height: 100px;
+    background-color: bisque;
+    grid-area: welcome;
+}
 
+#card1,
+#card2,
+#card3,
+#card4{
+    background-color: darkorchid;
+    height: 400px;
+    width: 400px;
+}
+
+#card1{
+    background-color: chocolate;
+    grid-area: card1;
+}
+
+#card2{
+    background-color: darkgreen;
+    grid-area: card2;
+}
+
+#card3{
+    background-color: darkslateblue;
+    grid-area: card3;
+}
+
+#card4{
+    background-color: deeppink;
+    grid-area: card4;
+}
+
+#blogs{
+    grid-area: blogs;
+}
+
+#features{
+    grid-area: features;
+}
+
+#community{
+    grid-area: community;
+}
+
+@media (max-width: 400px){
+    #body{
+        grid-template-areas: 
+        "title title"
+        "welcome welcome"
+        "card1 card1"
+        "card2 card2"
+        "card3 card3"
+        "card4 card4";
+    }
+}
