@@ -1,5 +1,6 @@
 
 body{
+    color: white;
     text-align: center;
     font: 2rem "Arial";
     max-width: 800px;
@@ -11,18 +12,26 @@ body{
     "title title"
     "welcome welcome"
     "card1 card2"
-    "card3 card4";
+    "card3 card4"
+    "blogs blogs"
+    "features features"
+    "community community";
 }
 
 #title{
-    height: 200px;
-    background-color: aquamarine;
+    text-shadow: 0px 0px 5px black;
+    font-weight: bold;
+    font-size: 4.5rem;
+    background: url("https://s1.1zoom.me/big0/731/373070-blackangel.jpg") no-repeat 0px -480px scroll;
+    height: 7rem;
     grid-area: title;
+    padding-top: 20px;
 }
 
 #welcome{
-    height: 100px;
-    background-color: bisque;
+    text-shadow: 0px 0px 25px black ;
+    background: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/a-future-surreal-arch-over-sea-dan-collier.jpg") no-repeat 0px -380px scroll;
+    height: 125px;
     grid-area: welcome;
 }
 
@@ -30,51 +39,55 @@ body{
 #card2,
 #card3,
 #card4{
-    background-color: darkorchid;
+    background-color: rgb(95, 0, 95);
     height: 400px;
     width: 400px;
 }
 
 #card1{
-    background-color: chocolate;
     grid-area: card1;
 }
 
 #card2{
-    background-color: darkgreen;
     grid-area: card2;
 }
 
 #card3{
-    background-color: darkslateblue;
     grid-area: card3;
 }
 
 #card4{
-    background-color: deeppink;
     grid-area: card4;
 }
 
 #blogs{
+    background-color: rgb(0, 65, 16);;
     grid-area: blogs;
 }
 
 #features{
+    background-color: rgb(0, 65, 16);;
     grid-area: features;
 }
 
 #community{
+    background-color: rgb(0, 65, 16);;
     grid-area: community;
 }
 
-@media (max-width: 400px){
-    #body{
+
+@media (max-width: 800px){
+    body{
+        width: 400px;
         grid-template-areas: 
         "title title"
         "welcome welcome"
         "card1 card1"
         "card2 card2"
         "card3 card3"
-        "card4 card4";
+        "card4 card4"
+        "blogs blogs"
+        "features features"
+        "community community";
     }
 }
