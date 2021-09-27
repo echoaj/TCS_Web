@@ -1,4 +1,23 @@
 
+:root{
+    --title-img: url("https://s1.1zoom.me/big0/731/373070-blackangel.jpg");
+    --welcome-img: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/a-future-surreal-arch-over-sea-dan-collier.jpg");
+
+    --ai-img: url("https://d2tyltutevw8th.cloudfront.net/media/image/ai-assist-1200-1620064802.jpg");
+    --bio-img: url("https://bitesizebio.com/wp-content/uploads/2020/08/2019-26420BacterialCRISPR-web.jpg");
+    --buisness-img: url("https://www.wearepennine.com/unified/wp-content/uploads/sites/2/2018/07/agreement-handshake-min.jpg");
+    --computer-img: url("https://images.indianexpress.com/2020/06/Japan-supercomputer-1200.jpg");
+    --energy-img: url("https://earth911.com/wp-content/uploads/2019/12/AdobeStock_271439094-1.jpeg");
+    --leisure-img: url("https://spaceenoughandtime.files.wordpress.com/2017/05/leisure.jpg");
+    --militay-img: url("https://npr.brightspotcdn.com/dims4/default/2676284/2147483647/strip/true/crop/4256x2234+0+0/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F26%2F84%2F36f011184047aed2828a72bb5914%2Fmortarmen-provide-fire-support-during-exercises-at-pohakuloa-training-area-hawaii.jpg");
+    --nanotech-img: url("https://media.sellfy.com/images/qE6zSJxc/ocgoLGa1BoYxV700zpkq/reized_for_sellfy.jpeg?w=1200");
+    --physics-img: url("http://www.hcs.harvard.edu/~physics/wp-content/uploads/2020/04/cropped-action-balls-black-and-white-illustration-60582-scaled-2.jpg");
+    --society-img: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/women-of-the-umoja-village-are-seen-in-samburu-county-some-news-photo-490529610-1564694740.jpg");
+    --space-img: url("https://www.pbs.org/wgbh/nova/media/original_images/universe-revealed-img.jpg");
+    --transportation-img: url("https://i.ytimg.com/vi/luDqbIZGgQM/maxresdefault.jpg");
+}
+
+
 body{
     color: white;
     text-align: center;
@@ -22,7 +41,7 @@ body{
     text-shadow: 0px 0px 5px black;
     font-weight: bold;
     font-size: 4.5rem;
-    background: url("https://s1.1zoom.me/big0/731/373070-blackangel.jpg") no-repeat 0px -480px scroll;
+    background: var(--title-img) no-repeat 0px -480px scroll;
     height: 7rem;
     grid-area: title;
     padding-top: 20px;
@@ -30,7 +49,7 @@ body{
 
 #welcome{
     text-shadow: 0px 0px 25px black ;
-    background: url("https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/a-future-surreal-arch-over-sea-dan-collier.jpg") no-repeat 0px -380px scroll;
+    background: var(--welcome-img) no-repeat 0px -380px scroll;
     height: 125px;
     grid-area: welcome;
 }
@@ -60,58 +79,75 @@ body{
     grid-area: card4;
 }
 
+#blogs,
+#features,
+#community{
+    background-color: rgb(15, 3, 121);
+}
+
 #blogs{
-    background-color: rgb(0, 65, 16);;
     grid-area: blogs;
 }
 
 #features{
-    background-color: rgb(0, 65, 16);;
     grid-area: features;
 }
 
 #community{
-    background-color: rgb(0, 65, 16);;
     grid-area: community;
 }
 
-#blog-title{
-    background-color: blue;
-}
-
 #blog-cards{
+    background: rgb(235, 235, 235);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 5px;
+    grid-gap: 0px;
 }
 
 #blog-cards > div{
-    height: 200px;
+    font-size: 1.4rem;
+    line-height: 200px;
+    text-shadow: 0px 0px 3px black;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 100px inset;
+    background-size: cover;
+    border: 1px black solid;
+}
+
+#blog-cards > div:hover{
+    box-shadow: rgba(0, 15, 148, 0.425) 0 0 0 100px inset;
+    cursor: pointer;
 }
 
 #ai{
-    background: url("https://d2tyltutevw8th.cloudfront.net/media/image/ai-assist-1200-1620064802.jpg") no-repeat -250px -280px scroll;
+    background: var(--ai-img) no-repeat -45px 0px scroll;
 }
 
 #biology{
-    background: url("https://medicine.tulane.edu/sites/medicine.tulane.edu/files/pictures/cellular_biology_800WAdobeStock_208548083-compressor.jpg") no-repeat -100px -100px scroll
+    background: var(--bio-img) no-repeat -120px 0px scroll
 }
 
 #business{
-    background: url("https://pixelandink.co.uk/wp-content/uploads/2019/01/Prototype-your-buisness.jpg") no-repeat -250px -150px scroll;
+    background: var(--buisness-img) no-repeat -50px 0px scroll;
 }
 
 #computers{
-    background: url("computers.jpg") no-repeat -300px -200px scroll;
+    background: var(--computer-img) no-repeat -40px 0px scroll;
 }
 
 #energy{
-    background: url("https://energy-ethics.net/wp-content/uploads/2020/03/cropped-gw_hum_energietransitie.jpg") no-repeat -200px -200px scroll;
+    background: var(--energy-img) no-repeat -40px 0px scroll;
 }
 
 #leisure{
-    background: url("https://spaceenoughandtime.files.wordpress.com/2017/05/leisure.jpg") no-repeat -400px -400px scroll;
-    /* background-size: contain; */
+    background: var(--leisure-img) no-repeat -20px 0px scroll;
+}
+
+#military{
+    background: var(--militay-img) no-repeat -140px 0px scroll;
+}
+
+#nanotech{
+    background: var(--nanotech-img) no-repeat -50px 0px scroll;
 }
 
 @media (max-width: 800px){
@@ -132,4 +168,16 @@ body{
     #title{
         font: 2.25rem "Arial";
     }
+
+    #blog-cards{
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+    }
+
+    #blog-cards > div{
+        font-size: 1rem;
+        line-height: 2rem;
+        background-position: center;
+    }
+
 }
