@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8" />
-    <title>JAVASCRIPT</title>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <title>Video Webcam</title>
+</head>
 
-  <body>
-    <h1>Hello World</h1>
+<body>
+  <h1>Smile!</h1>
 
-    <p>Choose a Special effect and make a silly face!</p>
-    <video autoplay style="height: 400px"></video>
-    
-	<select>
+  <h4>Choose a Special effect and make a silly face!</h4>
+  <video autoplay style="height: 500px"></video>
+
+  <!-- Filters https://www.w3schools.com/cssref/css3_pr_filter.asp -->
+  <div>
+    <select>
       <option value="">Choose an effect</option>
-      <option value="blur(10px)">Blur</option>
-      <option value="contrast(500%)">Contrast</option>
+      <option value="blur(5px)">Blur</option>
+      <option value="contrast(200%)">Contrast</option>
+      <option value="brightness(50%)">Low Brightness</option>
+      <option value="brightness(150%)">High Brightness</option>
+      <option value="grayscale(100%)">Grayscale</option>
+      <option value="invert(100%)">Invert</option>
+      <option value="saturate(200%)">Saturate</option>
+      <option value="sepia(100%)">Sepia</option>
     </select>
+  </div>
 
-    <script type="text/javascript">
-      var video = document.querySelector("video");
-      var select = document.querySelector("select");
-      function changeEffect() {video.style.filter = select.value;}
-      select.addEventListener("change", changeEffect);
-      navigator.mediaDevices
-        .getUserMedia({ video: true })
-        .then(function (stream) {
-          video.srcObject = stream;
-        });
-    </script>
-
-  </body>
+  <script type="text/javascript">
+    var video = document.querySelector("video");
+    var select = document.querySelector("select");
+    function changeEffect() { video.style.filter = select.value; }
+    select.addEventListener("change", changeEffect);
+    navigator.mediaDevices
+      .getUserMedia({ video: true })
+      .then(function (stream) {
+        video.srcObject = stream;
+      });
+  </script>
+</body>
 
 </html>
