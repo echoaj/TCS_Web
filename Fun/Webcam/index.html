@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>JAVASCRIPT</title>
+  </head>
+
+  <body>
+    <h1>Hello World</h1>
+
+    <p>Choose a Special effect and make a silly face!</p>
+    <video autoplay style="height: 400px"></video>
+    
+	<select>
+      <option value="">Choose an effect</option>
+      <option value="blur(10px)">Blur</option>
+      <option value="contrast(500%)">Contrast</option>
+    </select>
+
+    <script type="text/javascript">
+      var video = document.querySelector("video");
+      var select = document.querySelector("select");
+      function changeEffect() {video.style.filter = select.value;}
+      select.addEventListener("change", changeEffect);
+      navigator.mediaDevices
+        .getUserMedia({ video: true })
+        .then(function (stream) {
+          video.srcObject = stream;
+        });
+    </script>
+
+  </body>
+
+</html>
