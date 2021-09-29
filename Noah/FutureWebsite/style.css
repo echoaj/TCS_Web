@@ -54,10 +54,7 @@ body{
     grid-area: welcome;
 }
 
-#card1,
-#card2,
-#card3,
-#card4{
+.card{
     background-color: rgb(95, 0, 95);
     height: 400px;
     width: 400px;
@@ -112,7 +109,7 @@ body{
     background-size: cover;
     border: 1px black solid;
 }
-
+ 
 #blog-cards > div:hover{
     box-shadow: rgba(0, 15, 148, 0.425) 0 0 0 100px inset;
     cursor: pointer;
@@ -150,6 +147,22 @@ body{
     background: var(--nanotech-img) no-repeat -50px 0px scroll;
 }
 
+#physics{
+    background: var(--physics-img) no-repeat -50px 0px scroll;
+}
+
+#society{
+    background: var(--society-img) no-repeat -50px 0px scroll;
+}
+
+#space{
+    background: var(--space-img) no-repeat -70px 0px scroll;
+}
+
+#transport{
+    background: var(--transportation-img) no-repeat -50px 0px scroll;
+}
+
 @media (max-width: 800px){
     body{
         width: 400px;
@@ -168,16 +181,36 @@ body{
     #title{
         font: 2.25rem "Arial";
     }
-
+ 
     #blog-cards{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-gap: 0px;
     }
 
     #blog-cards > div{
+        background-position: center;
+        line-height: 4rem;
+        font-size: 1rem;
+    } 
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+    #blog-cards > div{
         font-size: 1rem;
         line-height: 2rem;
         background-position: center;
-    }
-
-}
+    } */
