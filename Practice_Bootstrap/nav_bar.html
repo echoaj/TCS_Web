@@ -1,3 +1,5 @@
+<!-- Reference: https://getbootstrap.com/docs/4.0/components/navbar/ -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,34 +14,45 @@
 
 <body>
 
-    <!-- navbar-light:means text will be responsive to light bg
+    <!-- navbar provides all the basic necessary style
+         navbar-light:means text will be responsive to light bg
          navbar-expand-sm:limit of responsive collapse -->
-    <nav class="navbar navbar-light bg-light navbar-expand-sm fixed-top">
-        <a href="#" class="navbar-brand mb-0 h1">
-            <img class="d-inline-block align-top" width="30"
-                src="https://www.freepngimg.com/thumb/bitcoin/63422-altcoins-exchange-bitcoin-cryptocurrency-ethereum-rockets.png"
-                alt="Image Unavailable">
-            Future Website
-        </a>
-
-        <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navgation">
-            Menu
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a href="#" class="nav-link active">Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a href="#" class="nav-link disabled">About</a>
-                </li>
-                <li class="nav-item active">
-                    <a href="#" class="nav-link active">Contact</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-dark bg-primary navbar-expand-sm fixed-top"  style="background-color: #0e1c6b;">
+        <div class="container">
+            <!-- mb- margin bottom -->
+            <a href="#" class="navbar-brand mb-0 h1">
+                <img class="d-inline-block align-top" width="30"
+                    src="https://www.freepngimg.com/thumb/bitcoin/63422-altcoins-exchange-bitcoin-cryptocurrency-ethereum-rockets.png"
+                    alt="Unavailable">
+                Future Website
+            </a>
+    
+            <!-- data-bs-toggle connecs with navbarNav -->
+            <button 
+                class="navbar-toggler"
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" 
+                aria-expanded="false" 
+                aria-label="Toggle navgation">
+                Menu
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link disabled">About</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link active">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
@@ -49,3 +62,15 @@
 </body>
 
 </html>
+
+<!------------------------------ NOTES -----------------------------------
+
+ Navbars come with built-in support for a handful of sub-components. Choose from the following as needed:
+.navbar-brand for your company, product, or project name.
+.navbar-nav for a full-height and lightweight navigation (including support for dropdowns).
+.navbar-toggler for use with our collapse plugin and other navigation toggling behaviors.
+.form-inline for any form controls and actions.
+.navbar-text for adding vertically centered strings of text.
+.collapse.navbar-collapse for grouping and hiding navbar contents by a parent breakpoint.
+
+ -->
