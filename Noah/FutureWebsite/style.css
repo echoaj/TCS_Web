@@ -15,6 +15,10 @@
     --society-img: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/women-of-the-umoja-village-are-seen-in-samburu-county-some-news-photo-490529610-1564694740.jpg");
     --space-img: url("https://www.pbs.org/wgbh/nova/media/original_images/universe-revealed-img.jpg");
     --transportation-img: url("https://i.ytimg.com/vi/luDqbIZGgQM/maxresdefault.jpg");
+
+    --artwork-img: url("https://ychef.files.bbci.co.uk/live/624x351/p023h4r0.jpg");
+
+    --aboutus-img: url("https://www.litigationdiscoverygroup.com/wp-content/uploads/2013/07/LDG-About-Us1-300x211.jpg")
 }
 
 
@@ -33,8 +37,7 @@ body{
     "card1 card2"
     "card3 card4"
     "blogs blogs"
-    "features features"
-    "community community";
+    "features community";
 }
 
 #title{
@@ -79,6 +82,7 @@ body{
 #blogs,
 #features,
 #community{
+    height: fit-content;
     background-color: rgb(15, 3, 121);
 }
 
@@ -95,26 +99,38 @@ body{
 }
 
 #blog-cards{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#features-cards,
+#community-cards{
+    grid-template-columns: 1fr 1fr;
+}
+
+.more-cards{
     background: rgb(235, 235, 235);
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 0px;
 }
 
-#blog-cards > div{
+/* Class specificity is lowr than Id specificity.
+Classes can't overwrite styles belonfing to an ID.
+This is why I had to make background size important */
+.more-cards > div{
     font-size: 1.4rem;
     line-height: 200px;
     text-shadow: 0px 0px 3px black;
     box-shadow: rgba(0, 0, 0, 0.1) 0 0 0 100px inset;
-    background-size: cover;
+    background-size: cover !important;
     border: 1px black solid;
 }
  
-#blog-cards > div:hover{
+.more-cards > div:hover{
     box-shadow: rgba(0, 15, 148, 0.425) 0 0 0 100px inset;
     cursor: pointer;
 }
 
+/* BLOG CARDS */
 #ai{
     background: var(--ai-img) no-repeat -45px 0px scroll;
 }
@@ -162,6 +178,17 @@ body{
 #transport{
     background: var(--transportation-img) no-repeat -50px 0px scroll;
 }
+
+/* FEATURES CARDS */
+#artwork{
+    background: var(--artwork-img)  no-repeat -85px 0px scroll;
+}
+
+/* COMMUNITY CARDS */
+#aboutus{
+    background: var(--aboutus-img)  no-repeat -45px 0px scroll;
+}
+
 
 @media (max-width: 800px){
     body{
