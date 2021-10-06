@@ -71,9 +71,45 @@ var F2S =document.getElementById("F2S")
 var F3S =document.getElementById("F3S")
 var F4S =document.getElementById("F4S")
 var F5S =document.getElementById("F5S")
+
+    // 4. Security (Police)
+        // a. Count display
+var PB = document.getElementById("PB")
+var P1C = document.getElementById("P1C")
+var P2C = document.getElementById("P2C")
+var P3C = document.getElementById("P3C")
+var P4C = document.getElementById("P4C")
+var P5C = document.getElementById("P5C")
+        //b. Count and Profit
+var P1Count =1
+var P2Count =0
+var P3Count =0
+var P4Count =0
+var P5Count =0
+var PProfit=1
+var P1Profit =1
+var P2Profit =0
+var P3Profit =0
+var P4Profit =0
+var P5Profit =0
+        //c. Ugrade Buttons
+var P1U = document.getElementById("F1U")
+var P2U = document.getElementById("F2U")
+var P3U = document.getElementById("F3U")
+var P4U = document.getElementById("F4U")
+        //d. Fell Buttons
+var P1S =document.getElementById("F1S")
+var P2S =document.getElementById("F2S")
+var P3S =document.getElementById("F3S")
+var P4S =document.getElementById("F4S")
+var P5S =document.getElementById("F5S")
+
+
+
     //4. General
 var Timer;
-var Money =0;
+var Money = 2000;
+var percentage = 0;
 var Play=false;
     //5. Game Over
 var End = document.getElementById("End");
@@ -115,12 +151,30 @@ function robbery(SCount, money){
     header.innerText = "STORES: " + SCount;
     if(SCount > 1 && money > 1){
         let probabiliy = 1 - (1 / (SCount * (1 - (1/money))))
-        let percentage = (Math.round(probabiliy * 100) / 10) + extra
+        percentage = (Math.round(probabiliy * 100) / 10) + extra
         if(percentage > 0.1){
             RobChance.innerText = percentage + "% chance of robbery";
         }
     }else{
         RobChance.innerText = "0% chance of robbery";
+    }
+}
+
+// Function will take away money if you get robbed.  Called every second
+
+function get_robbed(){
+    let randomNumber = Math.floor(Math.random() * 101);
+    RobChance.style.color = "#87CEEB";
+    if(percentage === randomNumber){
+        RobChance.style.color = "rose"
+        console.log("Mega Robbed")
+        let amount = Math.round(Money * 0.2);
+        Money -= amount
+    }else if(percentage > randomNumber){
+        RobChance.style.color = "red"
+        console.log("Robbedd")
+        let amount = Math.round(Money * 0.5);
+        Money -= amount
     }
 }
 
@@ -190,9 +244,19 @@ function timerAction(){
     F3C.innerText="Amount: "+F3Count
     F4C.innerText="Amount: "+F4Count
     F5C.innerText="Amount: "+F5Count
+    // NEW Security
+    P1C.innerText="Amount: "+P1Count
+    P2C.innerText="Amount: "+P2Count
+    P3C.innerText="Amount: "+P3Count
+    P4C.innerText="Amount: "+P4Count
+    P5C.innerText="Amount: "+P5Count
+
+
+    // UPDATE per second profits
     SP.innerText ="$"+SProfit+" per sec"
     Bank.innerText ="$"+Money
     FP.innerText =FProfit+" product per sec"
+
         //f. lvl1 button updates
     if(Money>=25){
         if(!SB.classList.contains("act")){
@@ -202,6 +266,10 @@ function timerAction(){
         if(!FB.classList.contains("act")){
             FB.classList.add("act");
             FB.classList.remove("disA");
+        };
+        if(!PB.classList.contains("act")){
+            PB.classList.add("act");
+            PB.classList.remove("disA");
         };
     }
     else{
@@ -213,7 +281,12 @@ function timerAction(){
             FB.classList.add("disA");
             FB.classList.remove("act");
         };
+        if(!PB.classList.contains("disA")){
+            PB.classList.add("disA");
+            PB.classList.remove("act");
+        };
     };
+    // *********************** START HERE ******************
     if(S1Count>=1){
         if(!S1S.classList.contains("act")){
             S1S.classList.add("act");
@@ -462,7 +535,13 @@ function timerAction(){
     //3. Timer
 function main(){
     Timer=setInterval(timerAction, 1000);
-};
+}
+
+    //4. Timer Robbed
+function rob_timer(){
+    Timer=setInterval(get_robbed, 1000);
+}
+
 //C. Buttons
     //1. Pause and Play
 PsPl.addEventListener("click",function(){
@@ -471,6 +550,7 @@ PsPl.addEventListener("click",function(){
             PsPl.innerText ="PAUSE";
             Play=true;
             main();
+            rob_timer();
         }
         else{
             PsPl.innerText ="PLAY";
@@ -652,6 +732,100 @@ F5S.addEventListener("click",function(){
     if(F5Count>=1){
         Money+= 200
         F5Count-=1
+        timerAction()
+    }
+});
+
+
+
+
+
+
+
+
+
+// SECURITY UPGRADES
+PB.addEventListener("click",function(){
+    if(Money>= 25){
+        Money-= 25
+        P1Count+= 1
+        timerAction()
+    }
+});
+        //b. lvl2
+P1U.addEventListener("click",function(){
+    if(Money>= 50&&P1Count>=1){
+        Money-= 50
+        P1Count-=1
+        P2Count+= 1
+        timerAction()
+    }
+});
+        //c. lvl3
+P2U.addEventListener("click",function(){
+    if(Money>= 100&&P2Count>=1){
+        Money-= 100
+        P2Count-=1
+        P3Count+= 1
+        timerAction()
+    }
+});
+        //d. lvl4
+P3U.addEventListener("click",function(){
+    if(Money>= 200&&P3Count>=1){
+        Money-= 200
+        P3Count-=1
+        P4Count+= 1
+        timerAction()
+    }
+});
+        //3. lvl5
+P4U.addEventListener("click",function(){
+    if(Money>= 400&&P4Count>=1){
+        Money-= 400
+        P4Count-=1
+        P5Count+= 1
+        timerAction()
+    }
+});
+    //6. Factory Selling        
+        //a. lvl1
+P1S.addEventListener("click",function(){
+    if(P1Count>=1){
+        Money+= 12
+        P1Count-=1
+        timerAction()
+    }
+});
+        //b. lvl2
+P2S.addEventListener("click",function(){
+    if(P2Count>=1){
+        Money+= 25
+        P2Count-=1
+        timerAction()
+    }
+});
+        //c. lvl3
+P3S.addEventListener("click",function(){
+    if(P3Count>=1){
+        Money+= 50
+        P3Count-=1
+        timerAction()
+    }
+});
+        //d. lvl4
+P4S.addEventListener("click",function(){
+    if(P4Count>=1){
+        Money+= 100
+        P4Count-=1
+        timerAction()
+    }
+});
+        //e. lvl5
+P5S.addEventListener("click",function(){
+    if(P5Count>=1){
+        Money+= 200
+        P5Count-=1
         timerAction()
     }
 });
