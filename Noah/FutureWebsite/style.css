@@ -17,9 +17,20 @@
     --transportation-img: url("https://i.ytimg.com/vi/luDqbIZGgQM/maxresdefault.jpg");
 
     --artwork-img: url("https://ychef.files.bbci.co.uk/live/624x351/p023h4r0.jpg");
+    --datatrends-img: url("https://www.incimages.com/uploaded_files/image/1920x1080/getty_913219882_412666.jpg");
+    --interviews-img: url("https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5e33ab078b6cf300071d7cd7%2FBusinesspeople-handshaking-after-deal-or-interview%2F960x0.jpg%3Ffit%3Dscale");
+    --links-img: url("https://searchengineland.com/figz/wp-content/seloads/2016/09/links-content-sharing-ss-1920-800x563.jpg");
+    --polls-img: url("https://avatars.slack-edge.com/2020-05-09/1112549471909_7543dde099089941d3c3_512.png");
+    --videos-img: url("https://cdn.dribbble.com/users/10882/screenshots/14283617/media/42282464f67bfaf307fe06b3a3b57ee7.png?compress=1&resize=400x300");
 
-    --aboutus-img: url("https://www.litigationdiscoverygroup.com/wp-content/uploads/2013/07/LDG-About-Us1-300x211.jpg")
+    --aboutus-img: url("https://www.litigationdiscoverygroup.com/wp-content/uploads/2013/07/LDG-About-Us1-300x211.jpg");
+    --contactus-img: url("https://www.coast2coastlending.com/wp-content/uploads/2021/07/Contact-Coast-2-Coast-Lending.jpg");
+    --forum-img: url("https://images.ctfassets.net/lzny33ho1g45/turn-google-forms-entries-into-p-img/500045fd2e97c0d0200f60cd8427c00f/file.png?w=1520&fm=jpg&q=30&fit=thumb&h=760");
+    --socialmedia-img: url("https://e3.365dm.com/18/09/2048x1152/skynews-mobile-phones-social-media_4438409.jpg");
 }
+
+
+
 
 
 body{
@@ -190,11 +201,42 @@ This is why I had to make background size important */
     background: var(--artwork-img)  no-repeat -85px 0px scroll;
 }
 
+#datatrends{
+    background: var(--datatrends-img) no-repeat 0px 0px scroll;
+}
+
+#interviews{
+    background: var(--interviews-img) no-repeat 0px 0px scroll;
+}
+
+#links{
+    background: var(--links-img) no-repeat 0px 0px scroll;
+}
+
+#polls{
+    background: var(--polls-img) no-repeat 0px 0px scroll;
+}
+
+#videos{
+   background: var(--videos-img) no-repeat -40px 0px scroll;
+}
+
 /* COMMUNITY CARDS */
 #aboutus{
     background: var(--aboutus-img)  no-repeat -45px 0px scroll;
 }
 
+#contactus{
+    background: var(--contactus-img)  no-repeat -55px 0px scroll;
+}
+
+#forum{
+    background: var(--forum-img)  no-repeat -100px -0px scroll;
+}
+
+#socialmedia{
+    background: var(--socialmedia-img)  no-repeat -80px 0px scroll;
+}
 
 @media (max-width: 800px){
     body{
@@ -215,13 +257,13 @@ This is why I had to make background size important */
         font: 2.25rem "Arial";
     }
  
-    #blog-cards{
-        grid-template-columns: 1fr 1fr;
+    .more-cards{
+        grid-template-columns: 1fr 1fr !important;
         grid-gap: 0px;
     }
 
-    #blog-cards > div{
-        background-position: center;
+    .more-cards > div{
+        background-position: center !important;
         line-height: 4rem;
         font-size: 1rem;
     } 
