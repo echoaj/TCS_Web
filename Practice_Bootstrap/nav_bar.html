@@ -18,52 +18,54 @@
          navbar-light:means text will be responsive to light bg
          navbar-expand-sm:limit of responsive collapse 
          fixed-top will overlay itself over content while scrolling-->
-    <nav class="navbar navbar-dark bg-primary navbar-expand-sm fixed-top"  style="background-color: #0e1c6b;">
-        <div class="container">
-            <!-- mb- margin bottom -->
-            <a href="#" class="navbar-brand mb-0 h1">
-                <!-- display inline block -->
-                <img class="d-inline-block align-top" width="30"
-                    src="https://www.freepngimg.com/thumb/bitcoin/63422-altcoins-exchange-bitcoin-cryptocurrency-ethereum-rockets.png"
-                    alt="Unavailable">
-                Future Website
-            </a>
-    
-            <!-- data-bs-toggle connecs with navbarNav -->
-            <button 
-                class="navbar-toggler"
-                type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#navbarNav" 
-                aria-controls="navbarNav" 
-                aria-expanded="false" 
-                aria-label="Toggle navgation">
-                Menu
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link active">Home</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link disabled">About</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a href="#" class="nav-link active">Contact</a>
-                    </li>
-                </ul>
+    <template id="my_nav">
+        <nav class="navbar navbar-dark bg-primary navbar-expand-sm fixed-top"  style="background-color: #0e1c6b;">
+            <div class="container">
+                <!-- mb- margin bottom -->
+                <a href="#" class="navbar-brand mb-0 h1">
+                    <!-- display inline block -->
+                    <img class="d-inline-block align-top" width="30"
+                        src="https://www.freepngimg.com/thumb/bitcoin/63422-altcoins-exchange-bitcoin-cryptocurrency-ethereum-rockets.png"
+                        alt="Unavailable">
+                    Future Website
+                </a>
+        
+                <!-- data-bs-toggle connecs with navbarNav -->
+                <button 
+                    class="navbar-toggler"
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navgation">
+                    Menu
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a href="/home" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="#" class="nav-link active">About</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="#" class="nav-link active">Solutions</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="#" class="nav-link disabled">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </template>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
         crossorigin="anonymous"></script>
 
-</body>
-
-</html>
 
 <!------------------------------ NOTES -----------------------------------
 
