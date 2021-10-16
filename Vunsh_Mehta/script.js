@@ -1,9 +1,20 @@
 
 
-// const state = {
-//     "job": jobPicked,
-//     "college": college
-// }
+start = {
+    "life":[0, 0, "job", "career"],
+    "job":[1, 40000, "career", "keepjob"],
+    "keepjob":[5, 200000, "wife", "single"],
+    "college":[4, -100000, "masters", "career"],
+    "masters":[2, -50000, "PHD", "goodcareer"],
+    "career":[5, 10000, "wife", "single"],
+    "goodcareer":[5, 20000, "wife", "sngle"],
+    "PHD":[4, -100000, "greatcareer", "greatcareer"],
+    "single":[7, 0, "end", "end"],
+    "greatcareer":[5, 500000, "wife", "single"],
+    "wife":[7, 200000, "kids", "end"],
+    "kids":[1, 14000, "end", "end"],
+    "end":[]
+}
 
 
 // Level 1
@@ -25,19 +36,17 @@ let time = document.getElementById("time");
 let cash = 0
 
 
-document.onclick= function(event) {
+document.onclick = function (event) {
     // Compensate for IE<9's non-standard event model
     //
-    if (event===undefined) event= window.event;
-    var target= 'target' in event? event.target : event.srcElement;
+    if (event === undefined) event = window.event;
+    var target = 'target' in event ? event.target : event.srcElement;
 
-    alert('clicked on '+target.tagName);
+    alert('clicked on ' + target.tagName);
 };
 
 // jobButton.onclick = jobPicked;
 button1.addEventListener("click", jobPicked, false);
-
-
 
 
 
