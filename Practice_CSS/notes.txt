@@ -1,7 +1,8 @@
 USE CSS WEBSITE DEV TOOL
-
 https://html-css-js.com/
 
 FONT HELP
-
 https://www.cssfontstack.com/
+
+COLOR PALLET
+https://coolors.co/palettes/trending
