@@ -1,0 +1,29 @@
+Source: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+
+PSEUDO-ELEMENTS DEFINED BY A SET OF CSS SPECIFICATIONS INCLUDE THE FOLLOWING:
+* = experimental
+
+::after (:after)
+
+::backdrop *
+::before (:before)
+
+::cue
+::cue-region
+
+::first-letter (:first-letter)
+::first-line (:first-line)
+::file-selector-button
+
+::grammar-error *
+
+::marker *
+
+::part() *
+::placeholder *
+
+::selection
+::slotted()
+::spelling-error *
+
+::target-text *
