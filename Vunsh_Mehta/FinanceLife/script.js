@@ -18,7 +18,6 @@ start = {
 
 
 // Level 1
-
 function jobPicked() {
     cash += 40000;
     money.innerText = "Money: $" + cash;
