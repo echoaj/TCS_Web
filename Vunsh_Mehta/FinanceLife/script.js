@@ -55,60 +55,49 @@ button1.addEventListener("click", jobPicked, false);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
-function action() {
-    console.log("hello");
-    newButton = document.createElement("hr");
-    document.body.appendChild(newButton);
-    button.style.display = "none";
+var money = 0;
+var time = 0;
+var list = start["life"];
+var buttonName1 = "";
+var buttonName2 = "";
+
+
+function updateState() {
+    time += list[0];
+    money += list[1];
+    buttonName1 = list[2];
+    buttonName2 = list[3];
+}
+
+function updateText() {
+    timeEL.innerText = `Time: ${time} years`;
+    moneyEL.innerText = `Money: $${money}`;
+    button1EL.innerText = buttonName1;
+    button2EL.innerText = buttonName2;
+}
+
+function nextLevel(i) {
+    let choice = list[i];
+    list = start[choice];
 }
 
 
-let button = document.getElementById("job");
-button.onclick = action;
+// Level 1
+function button(option) {
+    nextLevel(option);
+    updateState();
+    updateText();
+}
+
+
+let button1EL = document.getElementById("job");
+let button2EL = document.getElementById("college");
+let statusEL = document.getElementById("status");
+let moneyEL = document.getElementById("money");
+let timeEL = document.getElementById("time");
+let cashEL = 0;
+
+button1EL.addEventListener("click", button.bind(this, 2), false);
+button2EL.addEventListener("click", button.bind(this, 3), false);
 */
