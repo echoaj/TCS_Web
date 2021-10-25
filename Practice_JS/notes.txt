@@ -1,0 +1,14 @@
+CALLBACK STACK / WEB API / CALLBACK QUEUE DEMO
+http://latentflip.com/loupe/
+
+AJAX    (Asynchronous JavaScript And XML)
+Now a days people rarely use XML
+AJAJ    (Asynchronous JavaScript and JSON)
+JSON    (JavaScript Object Notation)
+
+JSON is very similary to java objects but they actually have nothing to do with them.
+One rule that json files must have is that keys must be a double quoted string not single quotes.
+Keys in json can't be anything other than a double quoted string and values for example can't be
+undefined or null.
+JSON Rules: https://www.json.org/json-en.html
+JSON Formatter: https://jsonformatter.curiousconcept.com/
