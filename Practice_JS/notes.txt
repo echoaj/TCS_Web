@@ -12,3 +12,26 @@ Keys in json can't be anything other than a double quoted string and values for 
 undefined or null.
 JSON Rules: https://www.json.org/json-en.html
 JSON Formatter: https://jsonformatter.curiousconcept.com/
+
+
+POSTMAN
+A tool for making requests.  It is very common.  Postman is an API platform for building and using APIs.
+Great for testinig APIs that you are creating.  Headers are like metadata
+
+CRYPTO API
+https://www.cryptonator.com/api
+
+STATUS CODE
+405 Method Not Allowed (a request method that is not allowed like using POST instead of GET for request)
+404 Not Found
+200 Ok
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status
+
+
+https://tvmaze.com/api
+
+https://icanhazdadjoke.com/ 
+In Postman go to header.  Key: Accept |  Value: application/json
+
+XMLHttpRequest
+Old way of sending requests.  Does not support Promises. Clunky Syntax.
