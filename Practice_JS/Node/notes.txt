@@ -1,0 +1,3 @@
+A common pattern in Node when requiring folders is to have an index.html in the folder
+you are requiring.  And inside index.html, require all other files, put them in an array
+and export them all. 
