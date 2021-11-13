@@ -78,6 +78,10 @@
     </style>
 
     <style>
+        :root{
+            --linewidth: 25%;
+        }
+
         /* Different types of selectors. */
 
         /* Modify all divs with a class called description */
@@ -90,13 +94,63 @@
             background-color: lightpink;
         }
 
+        /* Select the first tr element it finds */
+        /* Pseudo class */
+        tr:first-child{
+            background-color: rgb(211, 211, 214);
+        }
+
         /* pseudo class selector: get the last nth td element*/
         td:nth-last-child(1){
             background-color: lightsalmon;
         }
 
+        /* modify all paragraph tags who have a parent div*/
+        div > p {
+            font-size: 15px;
+        }
+
+        tr:last-child > td:nth-child(2) > div.last-child{
+            
+        }
+
+        /* Select all elements who have an alt tag of Metamorphic Rock */
+        [alt="Metamorphic Rock"]{
+            width: 90%;
+        }
+
+        /* Select all image tags that have a source containing "jpg" */
+        img[src*="jpg"]{
+            border-radius: 25px;
+            /* offset-x offset-y spread-raidus color*/
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.452);
+        }
+
+        caption::before{
+            content: "";
+            display: inline;
+            width: var(--linewidth);
+            height: 3px;
+            background: #ffffff;
+            left: 17%;
+            position: absolute;
+            top: 14.5%;
+        }
+
+        caption::after{
+            content: "";
+            display: inline;
+            width: var(--linewidth);
+            height: 3px;
+            background: #ffffff;
+            right: 17%;
+            position: absolute;
+            top: 14.5%;
+        }
+        
     </style>
 
+   
     <div class="page">
 
         <div class="outer center">
@@ -139,7 +193,7 @@
                                 <p>Metamorphic rocks are formed from other rocks due to heat and pressure undergound.</p>
                             </div>
                             <div class="descriptionImage">
-                                <img width=100% src="https://www.worldatlas.com/r/w960-q80/upload/5d/e2/08/shutterstock-756694396.jpg" alt="Unavailale">
+                                <img width=100% src="https://www.worldatlas.com/r/w960-q80/upload/5d/e2/08/shutterstock-756694396.jpg" alt="Metamorphic Rock">
                             </div>
                         </td>
                     </tr>
