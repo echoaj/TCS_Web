@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rounded Lines</title>
+</head>
+<body>
+    
+    <style>
+        :root{
+            --pic:url("https://cliparting.com/wp-content/uploads/2018/03/cool-pictures-2018-2.jpg");
+            --xpos:-100px;
+        }
+
+        body{
+            background-color: black;
+        }
+
+        div{
+            height: 100px;
+            border-radius: 50px;
+            margin-bottom: 100px;
+        }
+        .one{
+            width: 100%;
+            background: var(--pic) no-repeat var(--xpos) 0px scroll;
+        }
+        .two{
+            width: 80%;
+            background: var(--pic) no-repeat var(--xpos) -200px scroll;
+        }
+        .three{
+            width: 90%;
+            background: var(--pic) no-repeat var(--xpos) -400px scroll;
+        }
+        .four{
+            width: 75%;
+            background: var(--pic) no-repeat var(--xpos) -600px scroll;
+        }
+        .five{
+            width: 100%;
+            background: var(--pic) no-repeat var(--xpos) -800px scroll;
+        }
+        .six{
+            width: 85%;
+            background: var(--pic) no-repeat var(--xpos) -1000px scroll;
+        }
+    </style>
+
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+    <div class="five"></div>
+    <div class="six"></div>
+    
+
+</body>
+</html>
