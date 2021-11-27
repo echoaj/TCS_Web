@@ -1,0 +1,40 @@
+
+.container{
+    width: 1000px;
+    height: 1200px;
+    background-color: darkgrey;
+    margin: auto;
+}
+
+.leftColumn{
+    width: 30%;
+    height: 100%;
+    background-color: rgb(70, 95, 120);
+    float: left;
+}
+
+.rightColumn{
+    width: 70%;
+    height: 100%;
+    background-color: rgb(216, 216, 216);
+    float: left;
+}
+
+.photoDiv{
+    background-color: chartreuse;
+    height: 275px;
+    display: flex;
+}
+
+img {
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.514);
+}
+
+.fullName{
+    background-color: blueviolet;
+    text-align: right;
+}
