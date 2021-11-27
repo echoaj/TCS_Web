@@ -19,8 +19,8 @@ fetch('https://api.cryptonator.com/api/ticker/btc-usd')
 // Async Version
 const fetchBTC1 = async function () {
     try{
-        res = await fetch('https://api.cryptonator.com/api/ticker/btc-usd');
-        data = await res.json();
+        const res = await fetch('https://api.cryptonator.com/api/ticker/btc-usd');
+        const data = await res.json();
         console.log("FROM EXAMPLE FETCH 2: ", data.ticker.price);
     }catch(e){
         console.log("Something went wrong");
