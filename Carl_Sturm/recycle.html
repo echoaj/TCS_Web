@@ -1,48 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Barlow:wght@100&display=swap"
+        rel="stylesheet">
     <title>Recycling Guide</title>
 </head>
+
 <body>
 
     <style>
-
-        ul{
+        ul {
             list-style-type: kannada;
         }
 
+        #trashTitle {
+            color: gray;
+            background-color: rgb(224, 224, 224);
+        }
+
+        #recycleTitle {
+            color: blue;
+            background-color: lightskyblue;
+        }
+
+        #yardwasteTitle{
+            color: green;
+            background: lightgreen;
+        }
+
+        .fontChange {
+            font-family: 'Balsamiq Sans', cursive;
+        }
+
+        .biggerText {
+            font-size: 50px;
+        }
+
+        #container {
+            background-color: gold;
+            border-radius: 20px;
+            padding: 20px;
+            width: 320px;
+            margin: auto;
+        }
+
+        
     </style>
 
+    <h1 style="text-align:center">Disposal Info Website</h1>
 
-    <h1>Trash</h1>                      <!-- .fontCange #trash -->
-    <ul>
-        <li>Plastic</li>
-        <li>Textiles</li>
-        <li>Syrofoam</li>
-        <li>Toilet waste</li>
-        <li>Dust</li>
-    </ul>
-
-    <h1>Recyclables</h1>                <!-- .fontCange .biggerText #recycle -->
-    <ul>
-        <li>Plastic Bottles</li>
-        <li>Tin Cans</li>
-        <li>Paper</li>
-        <li>Cardboard</li>
-        <li>Metal Cans</li>
-    </ul>
-
-    <h1>Yard Waste</h1>                 <!-- .biggerText #yardwaste -->
-    <ul>
-        <li>Leaves</li>
-        <li>Bark</li>
-        <li>Wood</li>
-        <li>Grass Clippings</li>
-        <li>Food Scraps</li>
-    </ul>
+    <div id="container">
+        <h1 class="fontChange" id="trashTitle">Trash</h1> <!-- .fontCange #trash -->
+        <ul>
+            <li>Plastic</li>
+            <li>Textiles</li>
+            <li>Syrofoam</li>
+            <li>Toilet waste</li>
+            <li>Dust</li>
+        </ul>
     
+        <h1 class="fontChange biggerText" id="recycleTitle">Recyclables</h1> <!-- .fontCange .biggerText #recycle -->
+        <ul>
+            <li>Plastic Bottles</li>
+            <li>Tin Cans</li>
+            <li>Paper</li>
+            <li>Cardboard</li>
+            <li>Metal Cans</li>
+        </ul>
+    
+        <h1 class="biggerText" id="yardwasteTitle">Yard Waste</h1> <!-- .biggerText #yardwaste -->
+        <ul>
+            <li>Leaves</li>
+            <li>Bark</li>
+            <li>Wood</li>
+            <li>Grass Clippings</li>
+            <li>Food Scraps</li>
+        </ul>
+    </div>
+
 </body>
+
 </html>
