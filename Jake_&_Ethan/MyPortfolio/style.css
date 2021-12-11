@@ -36,6 +36,7 @@ img {
 
 .fullName{
     /* background-color: blueviolet; */
+    font-family: 'Spartan', sans-serif;
 }
 
 .leftColumnWritting {
@@ -52,4 +53,13 @@ img {
 
 #personalInfo > p{
     margin: 6px 0px;
+}
+
+#skills p{
+    margin: 2px 0px;
+}
+
+#skills h4{
+    color: white;
+    margin: 8px 0px;
 }
