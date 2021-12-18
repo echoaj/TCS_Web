@@ -10,6 +10,7 @@
     width: 30%;
     height: 100%;
     background-color: rgb(70, 95, 120);
+    font-family: Arial, Helvetica, sans-serif;
     float: left;
 }
 
@@ -17,6 +18,7 @@
     width: 70%;
     height: 100%;
     background-color: rgb(216, 216, 216);
+    font-family: Arial, Helvetica, sans-serif;
     float: left;
 }
 
@@ -63,3 +65,26 @@ img {
     color: white;
     margin: 8px 0px;
 }
+
+/* ---NEW--- */
+.topic {
+    margin-left: 25px;
+    margin-right: 70px;
+}
+
+.topic h3 {
+    color: rgb(50, 75, 100);
+}
+
+.Experience {
+    margin-top: 70px;
+}
+
+.Experience p, .Education p, .Projects p{
+    line-height: 10px;
+}
+
+a {
+    color: black;
+}
+
