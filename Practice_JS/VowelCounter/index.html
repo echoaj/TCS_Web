@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vowel Counter</title>
 </head>
-<body>    
+
+<body>
     <div>
         <h1>Vowel Counter</h1>
-        
+
         <form>
             <label for="usrInput">Text</label>
             <input type="text" id="usrInput">
@@ -19,10 +21,23 @@
     </div>
 
     <script>
-        function userInput(event){
+
+        function count(string, letter) {
+            total = 0;
+            for (let i = 0; i < string.length; i++) {
+                if (string[i] === letter) {
+                    total++;
+                }
+            }
+            return total;
+        }
+
+        function userInput(event) {
             var text = document.getElementById("usrInput");
             var string = text.value;
-            alert(string.length);
+            var vowelTotal = count(string, 'a') + count(string, 'e') +
+                             count(string, 'i') + count(string, 'o') + count(string, 'u')
+            alert(vowelTotal);
             event.preventDefault();
         }
 
@@ -32,4 +47,5 @@
 
 
 </body>
+
 </html>
