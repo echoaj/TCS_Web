@@ -15,11 +15,14 @@
             background-color: lightgoldenrodyellow;
         }
         /* (Do Last )Make outer background image */
-        /* Make center centered*/
+        /* Make center centered */
+
+        /* Center page give width of 800px */
         .center {
             width: 800px;
             margin: auto;
         }
+
         /* Make textCenter centered*/
         .textCenter {
             text-align: center;
@@ -27,7 +30,6 @@
         /* Make description larger with padding */
         .description {
             background-color: lightcyan;
-            text-align: center;
             font-size: 20px;
             padding: 10px;
         }
@@ -66,19 +68,37 @@
             color: rgb(117, 4, 4);
             font-size: 30px;
         }
-
+        /* Change bg color of all divs elements with a class of description */
         div .description {
            border-radius: 20px;
         }
+        /* Select first tr found and make font style italic */
         /* Pseudo class */
         tr:first-child {
             font-style: italic;
         }
-
+        /* Change bg color of first td element found in every tr */
         tr td:first-child {
             background: yellowgreen;
         }
         
+        /* Change bg color all td elements that come immediatly after a td element (not inside)*/
+
+        /* Change bg color of nth-last-child of td element */
+
+        /* Select the last Div -> withing parent the 2nd td found -> within the last tr found on the page. */
+        /* Cahnge transform scale */
+
+        /* Select all elements who's src conatins the substring "jpg" */
+        /* Change border radius and box shadow */
+
+        /* Declaring variables */
+        
+        /* Insert empty box after caption text */
+        /* Pseudo Elements */
+
+        /* Insert empty box before caption text */
+
     </style>
 
     <div class="page">
@@ -104,7 +124,7 @@
                             </div>
                             <div class="descriptionImage">
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Sulfidic_anorthosite_%28platinum-palladium_ore%29_%28Johns-Manville_Reef%2C_Stillwater_Complex%2C_Neoarchean%2C_2.71_Ga%3B_Stillwater_Mine%2C_Beartooth_Mountains%2C_Montana%2C_USA%29_8.jpg"
-                                alt="Image Unavailable" width="100px">
+                                alt="Image Unavailable" width="100%" height="200px">
                             </div>
                         </td>
                         <td>
@@ -113,7 +133,7 @@
                             </div>
                             <div class="descriptionImage">
                                 <img src="https://www.wardsci.com/stibo/bigweb/std.lang.all/06/18/10160618.jpg" 
-                                alt="Image Unavailable" width="100px">
+                                alt="Image Unavailable" width="100%" height="200px">
                             </div>
                         </td>
                         <td>
@@ -122,7 +142,7 @@
                             </div>
                             <div class="descriptionImage">
                                 <img src="https://www.worldatlas.com/r/w960-q80/upload/5d/e2/08/shutterstock-756694396.jpg" 
-                                alt="Image Unavailable" width="100px">
+                                alt="Image Unavailable" width="100%" height="200px">
                             </div>
                         </td>
                     </tr>
