@@ -47,11 +47,38 @@
             to {background-color: crimson;}
         }
         /* Give colName a font size */
+        #colName {
+            font-size: 30px;
+        }
 
         /* ----------HTML ELEMENTS---------- */
         /* Give all td elements a background color */
-        /* Five table, caption a table-layout fixed with width 100% */
+        td {
+            background-color: burlywood;
+        }
+        /* Make table, caption a table-layout fixed with width 100% */
+        table, caption {
+            table-layout: fixed;
+            width: 100%;
+        }
         /* Make caption white, bigger fontsize, text shadow, centered */
+        caption {
+            color: rgb(117, 4, 4);
+            font-size: 30px;
+        }
+
+        div .description {
+           border-radius: 20px;
+        }
+        /* Pseudo class */
+        tr:first-child {
+            font-style: italic;
+        }
+
+        tr td:first-child {
+            background: yellowgreen;
+        }
+        
     </style>
 
     <div class="page">
