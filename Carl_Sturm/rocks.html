@@ -10,12 +10,18 @@
 
     <style>
         /* ----------CLASSES---------- */
+
+
+
         /* Change page background color */
         .page {
-            background-color: lightgoldenrodyellow;
+            background-image: url("https://d3mvlb3hz2g78.cloudfront.net/wp-content/uploads/2016/01/thumb_720_450_f_28.jpg");
+        
         }
         /* (Do Last )Make outer background image */
         /* Make center centered */
+        body {
+            }
 
         /* Center page give width of 800px */
         .center {
@@ -83,19 +89,36 @@
         }
         
         /* Change bg color all td elements that come immediatly after a td element (not inside)*/
+        td + td {
+            background-color: rgb(117, 4, 4);
+        }
 
         /* Change bg color of nth-last-child of td element */
+        td:nth-last-child(1) {
+            background-color: royalblue;
+        }
 
         /* Select the last Div -> withing parent the 2nd td found -> within the last tr found on the page. */
         /* Cahnge transform scale */
+        tr:last-child > td:nth-child(2) > div:last-child{
+            transform: scale(1);
+        }
 
         /* Select all elements who's src conatins the substring "jpg" */
         /* Change border radius and box shadow */
+        [src*="jpg"] {
+            border-radius: 20px;
+            box-shadow: 0px 4px 2px 0px rgba(0, 0, 0, 0.5);
+        }
 
         /* Declaring variables */
+        :root {
+            --line-width: 27%;
+        }
         
         /* Insert empty box after caption text */
         /* Pseudo Elements */
+
 
         /* Insert empty box before caption text */
 
