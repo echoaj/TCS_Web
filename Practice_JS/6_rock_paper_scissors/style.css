@@ -1,0 +1,41 @@
+:root {
+    --plyr-color: yellowgreen;
+    --comp-color: steelblue;
+}
+
+body {
+    background-color: rgb(65, 0, 45);
+    color: white;
+    font-family: Helvetica, sans-serif;
+    text-align: left;
+    margin: auto;
+}
+
+.plr {
+    color: var(--plyr-color);
+}
+
+.cmp {
+    color: var(--comp-color);
+}
+
+.tie {
+    color:grey;
+}
+
+.game {
+    max-width: 700px;
+    margin: auto;
+}
+
+.game > div {
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+img {
+    height: 100%;
+    cursor: pointer;
+}
