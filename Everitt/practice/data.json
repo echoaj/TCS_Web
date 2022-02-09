@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Alex",
+        "age": 26,
+        "job": "code coach"
+    },
+
+    {
+        "name": "Joe",
+        "age": 35,
+        "job": "Dominios",
+        "family": ["lisa","jake","ryan"]
+    }
+]
