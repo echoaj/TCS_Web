@@ -1,6 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiko&family=Bebas+Neue&family=DM+Sans&family=Heebo:wght@300&family=Hind+Madurai:wght@300&family=Inconsolata:wght@500&family=Lexend+Deca:wght@500&family=Noto+Sans&family=Open+Sans:wght@300&family=Prompt:wght@300&family=Work+Sans:wght@200;400&family=Zen+Kaku+Gothic+New:wght@300;400&display=swap');
+
+:root {
+    --plr-color: rgb(160, 0, 0);
+    --cmp-color: rgb(0, 0, 138);
+}
+
+.plr {
+    color: var(--plr-color);
+}
+
+.cmp {
+    color: var(--cmp-color);
+}
 
 body {
     background-color: rgb(0, 201, 134);
+    font-family: 'Work Sans'
 }
 
 .game {
@@ -12,6 +27,7 @@ body {
     display: flex;
     justify-content: space-between;
     height: 200px;
+    margin-bottom: 80px;
 }
 
 img {
