@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#3367D6">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A rock paper scissors game.  Human vs Computer.">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
     <title>Rock Paper Sissors</title>
 </head>
 
@@ -26,6 +30,12 @@
     </div>
 
     <script src="script.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+    </script>
 </body>
 
 </html>
