@@ -8,9 +8,8 @@ const winStatus = document.querySelector(".win");
 
 
 rock.addEventListener('click', () => {
-    plyrChoice.insertAdjacentHTML("beforeend", '<img src="rock.png" alt="rock" width="50px">')
+    plyrChoice.insertAdjacentHTML("beforeend", '<img src="rock.png" alt="rock" width="50px">');
 });
-
 
 paper.addEventListener('click', () => {
     console.log("Hello paper");
@@ -19,5 +18,4 @@ paper.addEventListener('click', () => {
 scissors.addEventListener('click', () => {
     console.log("Hello scissors");
 });
-
 
