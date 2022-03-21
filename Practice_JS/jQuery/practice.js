@@ -1,11 +1,23 @@
 
+let api = 'https://api.coinbase.com/v2/prices/spot?currency=USD'
+
 // NORMAL WAY
-const body = document.querySelector("body");
-const newdiv = document.createElement("h1");
-const text = document.createTextNode("Bye World");
-newdiv.append(text);
-body.append(newdiv);
+const req = new XMLHttpRequest();
+
+req.onload = function() {
+    const h1 = document.querySelector("h1");
+    h1.innerText = this.responseText;
+}
+
+req.open('GET', api);
+req.send();
+
 
 
 // USING JQUERY
-$('body').append("<h1>Bye World</h1>");
+$.get(api, function (response) {
+    $("h1").text(JSON.stringify(response))
+})
+
+
+
