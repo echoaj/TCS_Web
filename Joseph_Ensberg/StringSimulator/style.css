@@ -1,0 +1,9 @@
+body{
+    text-align: center;
+    font-family: 'Press Start';
+    background-color: gray;
+}
+#gameWindow{
+    margin-top: 6px;
+    background-color: white;
+}
