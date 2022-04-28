@@ -14,7 +14,7 @@ let Player_Size = 10;
 let Player_X = (Canvas_Width / 2);
 let Player_Y = (Canvas_Height / 2);
 let Player_Color = "blue";
-let Player_Length = 5;
+let Player_Length = 10;
 let Player_Segments = [{ X: Player_X, Y: Player_Y }]
 for (let i = 0; i < (Player_Length - 1) * Player_Size; i++) {
     Player_Segments.push({ X: Player_X - i, Y: Player_Y })
@@ -101,6 +101,7 @@ document.addEventListener("keypress", function (event) {
         Start();
     }
     else if (event.key == "w" || event.key == "s") {
+        // Adding key to list if it does not exist
         if (!Pressed_Keys.includes(event.key)) {
             Pressed_Keys.push(event.key);
         };
