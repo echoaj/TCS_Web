@@ -15,9 +15,9 @@ let Player_X = (Canvas_Width / 2);
 let Player_Y = (Canvas_Height / 2);
 let Player_Color = "blue";
 let Player_Length = 10;
-let Player_Segments = [{ X: Player_X, Y: Player_Y }]
+let Player_Segments = [{ X: Player_X, Y: Player_Y }];
 for (let i = 0; i < (Player_Length - 1) * Player_Size; i++) {
-    Player_Segments.push({ X: Player_X - i, Y: Player_Y })
+    Player_Segments.push({ X: Player_X - i, Y: Player_Y });
 };
 
 
@@ -33,11 +33,11 @@ function GetRandom(min, max) {
 
 // Makes either rectangle or cicle
 function MakeItem(X, Y, Width, Height, Color, Type) {
+    item.beginPath();
     if (Type == "rect") {
-        item.fillRect(X, Y, Width, Height);
+        item.rect(X, Y, Width, Height);
     }
     else if (Type == "arc") {
-        item.beginPath();
         item.arc(X + Width / 2, Y + Width / 2, Width / 2, 0, 2 * Math.PI);
         item.fill();
     };
@@ -45,15 +45,17 @@ function MakeItem(X, Y, Width, Height, Color, Type) {
     item.fillStyle = Color;
     item.fill();
 }
+
 //
 function CheckObstacles(obstacle) {
     for (let obs = 0; obs < obstacles.length; obs++) {
         if (obstacle["x"] == (obstacles[obs]["x"]) + obstacles[obs]["width"] * 2) {
-            return false
+            return false;
         };
     };
-    return true
+    return true;
 };
+
 //Update Game
 function Update() {
     item.clearRect(0, 0, Canvas_Width, Canvas_Height);
@@ -71,7 +73,7 @@ function Update() {
     };*/
 
     for (let o = 1; o < Player_Segments.length; o++) {
-        MakeItem(Player_Segments[o]["X"], Player_Segments[o]["Y"], Player_Size, Player_Size, Player_Color, "arc");
+        MakeItem(Player_Segments[o]["X"], Player_Segments[o]["Y"], Player_Size, Player_Size, Player_Color, "rect");
     };
 };
 //Start game
@@ -95,6 +97,7 @@ function follow_segment() {
         };
     }, 5);
 };
+
 //keys
 document.addEventListener("keypress", function (event) {
     if (event.key == "Enter" && Playing == false) {
@@ -113,6 +116,8 @@ document.addEventListener("keyup", function (event) {
     Pressed_Keys.splice(Pressed_Keys.indexOf(event.key), Pressed_Keys.indexOf(event.key) + 1);
 });
 
+let followSpeed = 15;
+// Follow w & s keys
 let Keys_timer = setInterval(function () {
     if (Pressed_Keys[0] == "w" && Player_Y >= 1) {
         Player_Y -= 10;
@@ -123,4 +128,4 @@ let Keys_timer = setInterval(function () {
         follow_segment();
     };
 
-}, 15);
+}, followSpeed);
