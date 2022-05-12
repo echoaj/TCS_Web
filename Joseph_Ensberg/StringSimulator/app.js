@@ -13,7 +13,7 @@ let playerSize = 10;
 let playerX = (CANVAS_WIDTH / 2);
 let playerY = (CANVAS_HEIGHT / 2);
 let playerColor = "blue";
-let playerLength = 5;
+let playerLength = 20;
 let playerSegments = [{ "x": playerX, "y": playerY }]
 for (let i = 0; i < (playerLength - 1) * playerSize; i++) {
     playerSegments.push({ "x": playerX - i, "y": playerY })
@@ -52,12 +52,22 @@ function CheckObstacles(obstacle){ //Checks if obstacle is far enough away from 
     return output;
 };
 
+// let posx = 0;
+let posy = 0;
+
 function Collision(segment){
-    console.log("collison")
-    for(let possibleCollison = 0; possibleCollison <= currentObstacles - 1; possibleCollison++)
+
+    for(let possibleCollison = 0; possibleCollison <= currentObstacles.length - 1; possibleCollison++)
     {
-        
-        if(currentObstacles[possibleCollison]["x"] + currentObstacles.possibleCollison["width"] >= segment[possibleCollison]["x"] && currentObstacles[possibleCollison]["x"] <= segment[possibleCollison]["x"] + playerSize && currentObstacles[possibleCollison]["y"] + currentObstacles.possibleCollison["height"] >= segment[possibleCollison]["y"] && currentObstacles[possibleCollison]["y"] <= segment[possibleCollison]["y"] + playerSize ){
+        let obstacle = currentObstacles[possibleCollison]; //Obstacle is set to a single dictonary
+
+        if ( obstacle["x"] + obstacle["width"] >= playerX && obstacle["x"] <= playerX + playerSize && obstacle["y"] + obstacle["height"] >= playerY && obstacle["y"] <= playerY + playerSize ){
+            if(playerX-1 > obstacle["x"])
+                playerY = posy;
+        }
+        if ( obstacle["x"] + obstacle["width"] >= segment["x"] && obstacle["x"] <= segment["x"] + playerSize && obstacle["y"] + obstacle["height"] >= segment["y"] && obstacle["y"] <= segment["y"] + playerSize ){
+            // segment["x"] = posx;
+            
             return true;      
         };
     };
@@ -66,12 +76,12 @@ function Collision(segment){
 
 function Update(){ //Creates objects shown on the canvas
     canvas.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT); //Resets canvas
+    let collided = false;
 
     for (let o = 0; o <= playerSegments.length - 1; o++) { //Creates all the segments for the player
-        console.log(Collision())
-        if(Collision(playerSegments[o])){
-            console.log("hello")
-        }
+        if(Collision(playerSegments[o])){ //if an obstacle collided with the player
+            collided = true;
+        };
         MakeObject(playerSegments[o]["x"], playerSegments[o]["y"], playerSize, playerSize, playerColor, "arc");
     };
 
@@ -84,7 +94,10 @@ function Update(){ //Creates objects shown on the canvas
     };
     
     for (let numObstacles = 0; numObstacles < currentObstacles.length; numObstacles++) {//Make obstacles on canvas
-        currentObstacles[numObstacles]["x"] -= 1; //Moves the obstacles
+        
+        if(!collided){
+            currentObstacles[numObstacles]["x"] -= 1; //Moves the obstacles
+        }
         if(currentObstacles[numObstacles]["x"] + currentObstacles[numObstacles]["width"] < 0){ //If an obstacle is past the view
           currentObstacles.shift(); //Remove the obstacle
         }
@@ -110,6 +123,15 @@ function follow_segment() {
             // set position of curent segment to previous segmentin thelist
             // each segment follow the segment in front of it.
             playerSegments[Current_Segment]["y"] = playerSegments[Current_Segment - 1]["y"];
+            //let segLocationTemp = playerSegments[Current_Segment - 1]["y"];
+            // for (let o = 10; o <= playerSegments.length-1; o++) { //Creates all the segments for the player
+            //     if(Collision(playerSegments[o])){ //if an obstacle collided with the player
+            //         playerSegments[o]["y"] = 300;
+            //     }else{
+            //         playerSegments[Current_Segment]["y"] = segLocationTemp;
+            //         segLocationTemp = playerSegments[Current_Segment - 1]["y"];
+            //     }
+            // };
             Current_Segment++;
         };
     }, 5);
@@ -133,11 +155,14 @@ document.addEventListener("keyup", function (event) {
 
 let Keys_timer = setInterval(function () {
     if (pressedKeys[0] == "w" && playerY >= 1) {
+        posy = playerY;
         playerY -= 1;
         follow_segment();
     }
     else if (pressedKeys[0] == "s" && playerY <= CANVAS_HEIGHT - playerSize) {
+        posy = playerY;
         playerY += 1;
+
         follow_segment();
     };
 
