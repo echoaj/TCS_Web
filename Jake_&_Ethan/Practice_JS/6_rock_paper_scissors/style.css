@@ -3,6 +3,7 @@
 :root {
     --plr-color: rgb(160, 0, 0);
     --cmp-color: rgb(0, 0, 138);
+    --tie-color: rgb(80, 80, 80);
 }
 
 .plr {
@@ -11,6 +12,10 @@
 
 .cmp {
     color: var(--cmp-color);
+}
+
+.tie {
+    color: var(--tie-color);
 }
 
 body {
