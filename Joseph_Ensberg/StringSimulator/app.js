@@ -2,6 +2,9 @@
 let playing = false;
 let pressedKeys = [];
 
+// let posx = 0;
+let posy = 0;
+
 //Canvas
 const CANVAS_WIDTH = 1400;
 const CANVAS_HEIGHT = 700;
@@ -52,8 +55,6 @@ function CheckObstacles(obstacle){ //Checks if obstacle is far enough away from 
     return output;
 };
 
-// let posx = 0;
-let posy = 0;
 
 function Collision(segment){
 
