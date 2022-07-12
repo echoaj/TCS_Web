@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Finished Quiz</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="text-center mx-auto">
+            <h1 class="mb-5 mt-3">Quiz Completed</h1>
+            <button class="mb-5 mt-3 btn btn-success mx-auto" type="button">Show Score</button>
+        </div>
+    </div>
+
+    <script>
+
+
+        function calulcateScore(answers) {
+            // q1: 'A Programming Language', q2: 'No', q3: 'function', text: '', enter: 'Submit'}
+            let score = 0;
+            score += answers.q1 === 'A Programming Language';
+            score += answers.q2 === 'No';
+            score += answers.q3 === 'lambda';
+            let h5 = document.createElement('h5');
+            h5.innerHTML = `You scored ${score} out of 3`;
+            // show score after button
+            btn.insertAdjacentElement("afterend", h5);
+            let tryAgain = document.createElement('button');
+            tryAgain.innerHTML = 'Try Again';
+            tryAgain.classList.add('btn', 'btn-danger', 'my-3');
+            tryAgain.onclick = () => {
+                window.location.href = '/';
+            };
+            h5.insertAdjacentElement("afterend", tryAgain);
+            btn.disabled = true;
+        }
+
+        let http = new XMLHttpRequest();
+
+        let btn = document.querySelector('button');
+        btn.addEventListener('click', () => {
+            // make ajax requestiong to /answers
+            http.open('GET', '/answers');
+            http.send();
+            http.onreadystatechange = function () {
+                if (http.readyState === 4 && http.status === 200) {
+                    response = JSON.parse(http.responseText);
+                    calulcateScore(response);
+                }
+            };
+        });
+
+    </script>
+</body>
+
+</html>

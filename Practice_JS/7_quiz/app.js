@@ -13,17 +13,20 @@ app.use(express.urlencoded({ extended: true }));
 });*/
 
 // Step 2
-/*app.get('/', (req, res) => { 
+app.get('/', (req, res) => { 
     res.sendFile(__dirname + '/frontend/index.html');
-});*/
+});
 
 // Step 3
-app.use(express.static('frontend'));
+// app.use(express.static('frontend'));
 
 app.post('/', (req, res) => {
     results = req.body;
-    console.log(results)
-    res.send('<h1>Form Submitted!</h1>');
+    res.sendFile(__dirname + '/frontend/finished.html');
+});
+
+app.get('/answers', (req, res) => {
+    res.send(results);
 });
 
 app.listen(PORT, () => {
