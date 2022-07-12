@@ -2,6 +2,7 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
+let results = '';
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -20,7 +21,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('frontend'));
 
 app.post('/', (req, res) => {
-    console.log(req.body);
+    results = req.body;
+    console.log(results)
     res.send('<h1>Form Submitted!</h1>');
 });
 
