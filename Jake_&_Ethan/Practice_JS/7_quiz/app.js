@@ -1,15 +1,27 @@
+const { json } = require('express');
 const express = require('express');
 const app = express();
 const PORT = 3000;
+let result = '';
 
 // Middlewhere
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
-app.use(express.static('frontend'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+// app.use(express.static('frontend'));
+
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/frontend/index.html');
+});
 
 // Function executes when user creates a post request form the browser
 app.post('/', (req, res) => {
-    res.send('<h1>Thank you for your submission!</h1>');
+    result = req.body;
+    console.log(result);
+    res.sendFile(__dirname + '/frontend/finished.html');
+});
+
+app.get('/answers', (req, res) => {
+    res.send(result);
 });
 
 app.listen(PORT, () => {
