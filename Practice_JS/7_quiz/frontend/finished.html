@@ -52,7 +52,7 @@
             http.send();
             http.onreadystatechange = function () {
                 if (http.readyState === 4 && http.status === 200) {
-                    response = JSON.parse(http.responseText);
+                    let response = JSON.parse(http.responseText);
                     calulcateScore(response);
                 }
             };

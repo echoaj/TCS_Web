@@ -15,15 +15,35 @@
 <body>
 
     <div class="container">
-
         <div class="text-center mx-auto">
 
             <h1 class="mb-5 mt-3">Quiz Completed</h1>
             <h2>Your score is 0/5</h2>
-
+            <button class="mb-5 mt-3 btn btn-success mx-auto" type="button">Show Score</button>
         </div>
-
     </div>
+
+    <script>
+
+        function calculateScore(answers) {
+            
+        }
+
+        let http = new XMLHttpRequest()
+
+        let btn = document.querySelector('button');
+        btn.addEventListener('click', () => {
+            http.open('GET', '/answers');
+            http.send();
+            http.onreadystatechange = function () {
+                if (http.readyState === 4 && http.status === 200) {
+                    let response = JSON.parse(http.responseText);
+                    calculateScore(response);
+                }
+            }
+        });
+
+    </script>
 
 </body>
 
