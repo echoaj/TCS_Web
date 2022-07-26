@@ -18,15 +18,38 @@
         <div class="text-center mx-auto">
 
             <h1 class="mb-5 mt-3">Quiz Completed</h1>
-            <h2>Your score is 0/5</h2>
-            <button class="mb-5 mt-3 btn btn-success mx-auto" type="button">Show Score</button>
+            <button class="score mb-5 mt-3 btn btn-success mx-auto" type="button">Show Score</button>
+            <h2></h2>
         </div>
     </div>
 
     <script>
 
         function calculateScore(answers) {
-            
+            let score = 0;
+            score += answers.q1 === "A Programmaing Language";
+            score += answers.q2 === "No";
+            score += answers.q3 === "lambda";
+            score += answers.q4 === "#";
+            score += answers.q5 === "True";
+            const h2result = document.querySelector("h2");
+            h2result.innerText = `You scored ${score} out of 5`;
+
+            // Create try again button
+            const tryAgainBtn = document.createElement("button");
+            tryAgainBtn.className = "btn btn-danger my-5";
+            tryAgainBtn.innerText = "Try Again";
+            // Append button to the body of the page
+            const divContianer = document.querySelector(".text-center");
+            divContianer.appendChild(tryAgainBtn);
+            // Create an onClick event that will reload the page
+            tryAgainBtn.addEventListener("click", function () {
+                window.location.reload();
+            });
+
+            const scoreBtn = document.querySelector(".score");
+            // Disable score btn
+            scoreBtn.disabled = true;
         }
 
         let http = new XMLHttpRequest()
