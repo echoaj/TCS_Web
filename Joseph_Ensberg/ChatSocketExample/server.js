@@ -9,4 +9,14 @@ app.use(express.static('public'));
 
 server.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
+    console.log(`http://localhost:${PORT}`);
 });
+
+io.on('connection', (socket) => {
+    console.log("Client Connected: ", socket.id);
+
+    socket.on('message', (message) => {
+        console.log("Server Recieved Message: ", message);
+        io.sockets.emit('message', message);
+    })
+})
