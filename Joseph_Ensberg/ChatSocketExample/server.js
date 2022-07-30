@@ -12,11 +12,13 @@ server.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
 });
 
-io.on('connection', (socket) => {
-    console.log("Client Connected: ", socket.id);
 
-    socket.on('message', (message) => {
-        console.log("Server Recieved Message: ", message);
-        io.sockets.emit('message', message);
+io.on('connection', (socket) => {
+    console.log('A user connected: ', socket.id);
+
+    socket.on('chat message', (message) => {
+        console.log("Meesage Received: ", message);
+        io.sockets.emit('chat message', message);
     })
+
 })
