@@ -6,7 +6,7 @@ let results = '';
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(favicon(__dirname + '/frontend/favicon.ico'));
+app.use(favicon(__dirname + '/favicon.ico'));
 
 // Step 1
 /*app.get('/', (req, res) => { 
