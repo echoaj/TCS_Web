@@ -29,8 +29,10 @@
             score += answers.q1 === 'A Programming Language';
             score += answers.q2 === 'No';
             score += answers.q3 === 'lambda';
+            score += answers.q4 === '#';
+            score += answers.q5 === 'True';
             let h5 = document.createElement('h5');
-            h5.innerHTML = `You scored ${score} out of 3`;
+            h5.innerHTML = `You scored ${score} out of 5`;
             // show score after button
             btn.insertAdjacentElement("afterend", h5);
             let tryAgain = document.createElement('button');

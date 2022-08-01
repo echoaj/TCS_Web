@@ -1,11 +1,12 @@
-
 const express = require('express');
 const app = express();
+const favicon = require('serve-favicon');
 const PORT = process.env.PORT || 3000;
 let results = '';
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(favicon(__dirname + '/frontend/favicon.ico'));
 
 // Step 1
 /*app.get('/', (req, res) => { 
