@@ -16,9 +16,16 @@ server.listen(PORT, () => {
 io.on('connection', (socket) => {
     console.log('A user connected: ', socket.id);
 
+    socket.username = 'Anonymous';
+
     socket.on('chat message', (message) => {
         console.log("Meesage Received: ", message);
-        io.sockets.emit('chat message', message);
+        io.sockets.emit('chat message', {"message": message, "user": socket.username});
     })
 
+    socket.on('username', (user) => {
+        console.log("User Added: ", user);
+        socket.username = user;
+        socket.broadcast.emit('joined chat', socket.username);
+    })
 })
