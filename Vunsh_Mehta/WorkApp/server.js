@@ -1,7 +1,11 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const PORT = process.env.PORT || 3000;
 
+app.use(cors({
+    origin: 'http://localhost:5500'
+}));
 
 // Middleware
 app.use(express.static('public'));
@@ -20,6 +24,12 @@ app.get('/index', (req, res) => {
 
 app.get('/login', (req, res) => {
     res.render('login');
+});
+
+let attachment = "<h1>Hello World</h1>";
+
+app.get('/attachment', (req, res) => {
+    res.send(attachment);
 });
 
 app.listen(PORT, () => {
