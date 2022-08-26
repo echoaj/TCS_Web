@@ -1,6 +1,7 @@
 const socket = io("http://localhost:3000");
 const btnSendMsg = document.getElementById('sendMessage');
 const btnSetUser = document.getElementById('setUsername');
+const chat = document.getElementById('chat');
 
 
 btnSetUser.addEventListener('click', () => {
@@ -15,15 +16,14 @@ btnSendMsg.addEventListener('click', () => {
     socket.emit('chat message', msg);
 });
 
-
 socket.on('chat message', (data) => {
-    const chatLine = document.getElementById('chatLine');
-    let message = data['message'];
-    let user = data['user'];
-    chatLine.innerHTML += user + ": " + message + '<br>';
+    const h2 = document.createElement('h2');
+    h2.innerText = data.username + ": " + data.message;
+    chat.appendChild(h2);
 });
 
 socket.on('joined chat', (user) => {
-    const chatLine = document.getElementById('chatLine');
-    chatLine.innerHTML += user + " joined the chat" + '<br>';
+    const h2 = document.createElement('h2');
+    h2.innerText = user + ": joined the chat";
+    chat.appendChild(h2);
 });
